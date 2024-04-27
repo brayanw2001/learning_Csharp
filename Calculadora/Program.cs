@@ -53,20 +53,20 @@ namespace Calculadora
         static float Soma (float res)
         {
             Console.Clear();
-            float num;
+            //float num;
 
             Console.Write("Insira o número: ");
-            num = int.Parse(Console.ReadLine());
+            float num = int.Parse(Console.ReadLine());
 
             return res += num;
         }
         static float Sub (float res)
         {
             Console.Clear();
-            float num;
+            //float num;
 
             Console.Write("Insira o número: ");
-            num = int.Parse(Console.ReadLine());
+            float num = int.Parse(Console.ReadLine());
 
             return res -= num;
         }
@@ -74,10 +74,10 @@ namespace Calculadora
         static float Mul (float res)
         {
             Console.Clear();
-            float num;
+            //float num;
 
             Console.Write("Insira o número: ");
-            num = int.Parse(Console.ReadLine());
+            float num = int.Parse(Console.ReadLine());
 
             return res *= num;
         }
@@ -85,10 +85,10 @@ namespace Calculadora
         static float Div (float res)
         {
             Console.Clear();
-            float num;
+            //float num;
 
             Console.Write("Insira o número: ");
-            num = int.Parse(Console.ReadLine());
+            float num = int.Parse(Console.ReadLine());
 
             return res /= num;
         }
