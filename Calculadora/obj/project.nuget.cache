@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZzZ9nmfdcQoHf0ZHGNTysa0nQCD+XvBRuHL860mj15oNN3Clah3ruRigaoID8agR5s5c9AGEVF0x3Ka9oDWBDg==",
+  "dgSpecHash": "saNS6Ga0xCX6KX3fcExmJOmhJFMVcLZrrq868RlX8l4KuS3BglRpkq1ZVOE1DT+laLkjrcyJoe6VdkA6xmXC8g==",
   "success": true,
-  "projectFilePath": "/home/brayan/Projects/Csharp/Calculadora/Calculadora.csproj",
+  "projectFilePath": "/home/brayan/Projects/learning_Csharp/Calculadora/Calculadora.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

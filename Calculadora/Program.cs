@@ -6,6 +6,7 @@ namespace Calculadora
     {
         static void Main ()
         {
+            Console.Clear();
             int opc = 90;
             float res = 0.0f;
 
@@ -20,25 +21,29 @@ namespace Calculadora
                     case 1:
                         Console.WriteLine("\n=== Soma ===");
                         res = Soma (res);
-                        Console.WriteLine("\nres: {0}", res);
+                        Console.Clear();
+                        Console.WriteLine("res: {0}", res);
                         break;
 
                     case 2:
-                        Console.WriteLine("\n=== Subtração ===");
+                        Console.WriteLine("=== Subtração ===");
                         res = Sub (res);
-                        Console.WriteLine("\nres: {0}", res);                    
+                        Console.Clear();
+                        Console.WriteLine("res: {0}", res);                    
                         break;
 
                     case 3:
                         Console.WriteLine("\n=== Multiplicação ===");
                         res = Mul (res);
-                        Console.WriteLine("\nres: {0}", res);   
+                        Console.Clear();
+                        Console.WriteLine("res: {0}", res);   
                         break;
 
                     case 4:
-                        Console.WriteLine("\n=== Divisão ===");
+                        Console.WriteLine("=== Divisão ===");
                         res = Div (res);
-                        Console.WriteLine("\nres: {0}", res);   
+                        Console.Clear();
+                        Console.WriteLine("res: {0}", res);   
                         break;
                 }      
             }
@@ -47,6 +52,7 @@ namespace Calculadora
 
         static float Soma (float res)
         {
+            Console.Clear();
             float num;
 
             Console.Write("Insira o número: ");
@@ -56,6 +62,7 @@ namespace Calculadora
         }
         static float Sub (float res)
         {
+            Console.Clear();
             float num;
 
             Console.Write("Insira o número: ");
@@ -66,6 +73,7 @@ namespace Calculadora
 
         static float Mul (float res)
         {
+            Console.Clear();
             float num;
 
             Console.Write("Insira o número: ");
@@ -76,6 +84,7 @@ namespace Calculadora
 
         static float Div (float res)
         {
+            Console.Clear();
             float num;
 
             Console.Write("Insira o número: ");

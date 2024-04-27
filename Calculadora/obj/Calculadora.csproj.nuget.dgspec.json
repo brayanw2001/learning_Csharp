@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/brayan/Projects/Csharp/Calculadora/Calculadora.csproj": {}
+    "/home/brayan/Projects/learning_Csharp/Calculadora/Calculadora.csproj": {}
   },
   "projects": {
-    "/home/brayan/Projects/Csharp/Calculadora/Calculadora.csproj": {
+    "/home/brayan/Projects/learning_Csharp/Calculadora/Calculadora.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/brayan/Projects/Csharp/Calculadora/Calculadora.csproj",
+        "projectUniqueName": "/home/brayan/Projects/learning_Csharp/Calculadora/Calculadora.csproj",
         "projectName": "Calculadora",
-        "projectPath": "/home/brayan/Projects/Csharp/Calculadora/Calculadora.csproj",
+        "projectPath": "/home/brayan/Projects/learning_Csharp/Calculadora/Calculadora.csproj",
         "packagesPath": "/home/brayan/.nuget/packages/",
-        "outputPath": "/home/brayan/Projects/Csharp/Calculadora/obj/",
+        "outputPath": "/home/brayan/Projects/learning_Csharp/Calculadora/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/brayan/.nuget/NuGet/NuGet.Config"
