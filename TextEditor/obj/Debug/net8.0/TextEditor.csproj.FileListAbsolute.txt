@@ -1,0 +1,15 @@
+/home/brayan/Projects/learning_Csharp/TextEditor/obj/Debug/net8.0/TextEditor.GeneratedMSBuildEditorConfig.editorconfig
+/home/brayan/Projects/learning_Csharp/TextEditor/obj/Debug/net8.0/TextEditor.AssemblyInfoInputs.cache
+/home/brayan/Projects/learning_Csharp/TextEditor/obj/Debug/net8.0/TextEditor.AssemblyInfo.cs
+/home/brayan/Projects/learning_Csharp/TextEditor/obj/Debug/net8.0/TextEditor.csproj.CoreCompileInputs.cache
+/home/brayan/Projects/learning_Csharp/TextEditor/obj/Debug/net8.0/TextEditor.sourcelink.json
+/home/brayan/Projects/learning_Csharp/TextEditor/bin/Debug/net8.0/TextEditor
+/home/brayan/Projects/learning_Csharp/TextEditor/bin/Debug/net8.0/TextEditor.deps.json
+/home/brayan/Projects/learning_Csharp/TextEditor/bin/Debug/net8.0/TextEditor.runtimeconfig.json
+/home/brayan/Projects/learning_Csharp/TextEditor/bin/Debug/net8.0/TextEditor.dll
+/home/brayan/Projects/learning_Csharp/TextEditor/bin/Debug/net8.0/TextEditor.pdb
+/home/brayan/Projects/learning_Csharp/TextEditor/obj/Debug/net8.0/TextEditor.dll
+/home/brayan/Projects/learning_Csharp/TextEditor/obj/Debug/net8.0/refint/TextEditor.dll
+/home/brayan/Projects/learning_Csharp/TextEditor/obj/Debug/net8.0/TextEditor.pdb
+/home/brayan/Projects/learning_Csharp/TextEditor/obj/Debug/net8.0/TextEditor.genruntimeconfig.cache
+/home/brayan/Projects/learning_Csharp/TextEditor/obj/Debug/net8.0/ref/TextEditor.dll
