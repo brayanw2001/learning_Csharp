@@ -28,22 +28,44 @@ namespace EditorHtml
             } while (Console.ReadKey().Key != ConsoleKey.Escape);
 
             Console.WriteLine("DDeseja salvar o arquivo? [y/n]");
-            SaveFile();
+            ChecksAnswer(file.ToString());
         }
-        public static void SaveFile()
+
+        public static void ChecksAnswer(string file)
         {
             var answer = Console.ReadLine();
 
             if (answer.StartsWith('y'))
             {
                 Console.Clear();
-                Console.Write("sim");       //implementar salvamento
+                SaveFile(file);
             } 
-            else
+            else if (answer.StartsWith('n'))
             {
                 Console.Clear();
                 Console.Write("não");
             } 
-        }        
+            else 
+            {
+                Console.Clear();
+                Console.WriteLine("Opção inválida. Tente novamente!");
+                Thread.Sleep(800);
+                Console.WriteLine("Deseja salvar o arquivo? [y/n]");
+                SaveFile(file);
+            }
+        }    
+
+        public static void SaveFile (string file) 
+        {
+                Console.Clear();
+                Console.WriteLine("Em qual diretório deseja salvar o arquivo?");
+                string path = Console.ReadLine();
+
+                using (var SavedFile = new StreamWriter(path))  // using <- abre e fecha o arquivo savedFile
+                {
+                    SavedFile.Write(file);                      // o arquivo criado receberá o conteúdo de file
+                }
+                Console.WriteLine($"Arquivo salvo com sucesso em {path}!");
+        }    
     }
 }
