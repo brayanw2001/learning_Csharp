@@ -8,7 +8,7 @@ namespace EditorHtml
         public static void Show()
         {
             Console.Clear();
-            Console.BackgroundColor = ConsoleColor.White;
+            //Console.BackgroundColor = ConsoleColor.White;
             Console.BackgroundColor = ConsoleColor.Blue;
             Console.Clear();
             Console.WriteLine("MODO EDITOR");
@@ -66,6 +66,7 @@ namespace EditorHtml
                     SavedFile.Write(file);                      // o arquivo criado receberá o conteúdo de file
                 }
                 Console.WriteLine($"Arquivo salvo com sucesso em {path}!");
+                Viewer.Show(file.ToString());
         }    
     }
 }

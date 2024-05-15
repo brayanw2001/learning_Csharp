@@ -73,5 +73,3 @@ namespace TextEditor
         }
     }
 }
-
-//block005 13:19
