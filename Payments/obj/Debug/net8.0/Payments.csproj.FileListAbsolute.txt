@@ -1,0 +1,15 @@
+/home/brayan/Projects/learning_Csharp/Payments/bin/Debug/net8.0/Payments
+/home/brayan/Projects/learning_Csharp/Payments/bin/Debug/net8.0/Payments.deps.json
+/home/brayan/Projects/learning_Csharp/Payments/bin/Debug/net8.0/Payments.runtimeconfig.json
+/home/brayan/Projects/learning_Csharp/Payments/bin/Debug/net8.0/Payments.dll
+/home/brayan/Projects/learning_Csharp/Payments/bin/Debug/net8.0/Payments.pdb
+/home/brayan/Projects/learning_Csharp/Payments/obj/Debug/net8.0/Payments.GeneratedMSBuildEditorConfig.editorconfig
+/home/brayan/Projects/learning_Csharp/Payments/obj/Debug/net8.0/Payments.AssemblyInfoInputs.cache
+/home/brayan/Projects/learning_Csharp/Payments/obj/Debug/net8.0/Payments.AssemblyInfo.cs
+/home/brayan/Projects/learning_Csharp/Payments/obj/Debug/net8.0/Payments.csproj.CoreCompileInputs.cache
+/home/brayan/Projects/learning_Csharp/Payments/obj/Debug/net8.0/Payments.sourcelink.json
+/home/brayan/Projects/learning_Csharp/Payments/obj/Debug/net8.0/Payments.dll
+/home/brayan/Projects/learning_Csharp/Payments/obj/Debug/net8.0/refint/Payments.dll
+/home/brayan/Projects/learning_Csharp/Payments/obj/Debug/net8.0/Payments.pdb
+/home/brayan/Projects/learning_Csharp/Payments/obj/Debug/net8.0/Payments.genruntimeconfig.cache
+/home/brayan/Projects/learning_Csharp/Payments/obj/Debug/net8.0/ref/Payments.dll

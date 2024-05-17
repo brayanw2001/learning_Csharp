@@ -1,0 +1,15 @@
+/home/brayan/Projects/learning_Csharp/NotasEMoedas/obj/Debug/net8.0/NotasEMoedas.GeneratedMSBuildEditorConfig.editorconfig
+/home/brayan/Projects/learning_Csharp/NotasEMoedas/obj/Debug/net8.0/NotasEMoedas.AssemblyInfoInputs.cache
+/home/brayan/Projects/learning_Csharp/NotasEMoedas/obj/Debug/net8.0/NotasEMoedas.AssemblyInfo.cs
+/home/brayan/Projects/learning_Csharp/NotasEMoedas/obj/Debug/net8.0/NotasEMoedas.csproj.CoreCompileInputs.cache
+/home/brayan/Projects/learning_Csharp/NotasEMoedas/obj/Debug/net8.0/NotasEMoedas.sourcelink.json
+/home/brayan/Projects/learning_Csharp/NotasEMoedas/bin/Debug/net8.0/NotasEMoedas
+/home/brayan/Projects/learning_Csharp/NotasEMoedas/bin/Debug/net8.0/NotasEMoedas.deps.json
+/home/brayan/Projects/learning_Csharp/NotasEMoedas/bin/Debug/net8.0/NotasEMoedas.runtimeconfig.json
+/home/brayan/Projects/learning_Csharp/NotasEMoedas/bin/Debug/net8.0/NotasEMoedas.dll
+/home/brayan/Projects/learning_Csharp/NotasEMoedas/bin/Debug/net8.0/NotasEMoedas.pdb
+/home/brayan/Projects/learning_Csharp/NotasEMoedas/obj/Debug/net8.0/NotasEMoedas.dll
+/home/brayan/Projects/learning_Csharp/NotasEMoedas/obj/Debug/net8.0/refint/NotasEMoedas.dll
+/home/brayan/Projects/learning_Csharp/NotasEMoedas/obj/Debug/net8.0/NotasEMoedas.pdb
+/home/brayan/Projects/learning_Csharp/NotasEMoedas/obj/Debug/net8.0/NotasEMoedas.genruntimeconfig.cache
+/home/brayan/Projects/learning_Csharp/NotasEMoedas/obj/Debug/net8.0/ref/NotasEMoedas.dll

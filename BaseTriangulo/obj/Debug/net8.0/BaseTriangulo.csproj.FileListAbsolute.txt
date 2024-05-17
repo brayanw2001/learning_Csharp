@@ -1,0 +1,15 @@
+/home/brayan/Projects/learning_Csharp/BaseTriangulo/obj/Debug/net8.0/BaseTriangulo.GeneratedMSBuildEditorConfig.editorconfig
+/home/brayan/Projects/learning_Csharp/BaseTriangulo/obj/Debug/net8.0/BaseTriangulo.AssemblyInfoInputs.cache
+/home/brayan/Projects/learning_Csharp/BaseTriangulo/obj/Debug/net8.0/BaseTriangulo.AssemblyInfo.cs
+/home/brayan/Projects/learning_Csharp/BaseTriangulo/obj/Debug/net8.0/BaseTriangulo.csproj.CoreCompileInputs.cache
+/home/brayan/Projects/learning_Csharp/BaseTriangulo/obj/Debug/net8.0/BaseTriangulo.sourcelink.json
+/home/brayan/Projects/learning_Csharp/BaseTriangulo/bin/Debug/net8.0/BaseTriangulo
+/home/brayan/Projects/learning_Csharp/BaseTriangulo/bin/Debug/net8.0/BaseTriangulo.deps.json
+/home/brayan/Projects/learning_Csharp/BaseTriangulo/bin/Debug/net8.0/BaseTriangulo.runtimeconfig.json
+/home/brayan/Projects/learning_Csharp/BaseTriangulo/bin/Debug/net8.0/BaseTriangulo.dll
+/home/brayan/Projects/learning_Csharp/BaseTriangulo/bin/Debug/net8.0/BaseTriangulo.pdb
+/home/brayan/Projects/learning_Csharp/BaseTriangulo/obj/Debug/net8.0/BaseTriangulo.dll
+/home/brayan/Projects/learning_Csharp/BaseTriangulo/obj/Debug/net8.0/refint/BaseTriangulo.dll
+/home/brayan/Projects/learning_Csharp/BaseTriangulo/obj/Debug/net8.0/BaseTriangulo.pdb
+/home/brayan/Projects/learning_Csharp/BaseTriangulo/obj/Debug/net8.0/BaseTriangulo.genruntimeconfig.cache
+/home/brayan/Projects/learning_Csharp/BaseTriangulo/obj/Debug/net8.0/ref/BaseTriangulo.dll
