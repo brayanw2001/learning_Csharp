@@ -14,7 +14,7 @@ namespace Estoque
         {
             Console.Clear();
             System.Console.WriteLine("====== Estoque ======");
-            System.Console.WriteLine("1. Visualizar estoque \n2. Adicionar Item \n3. Remover item\n");
+            System.Console.WriteLine("1. Visualizar estoque \n2. Adicionar um produto \n3. Adicionar quantidade de um produto \n4. Remover quantidade de um produto");
             Console.Write("Insira a opção: ");
             short option = short.Parse(Console.ReadLine());
 
@@ -24,13 +24,17 @@ namespace Estoque
                     Product.ItemView();
                     break;
                 case 2: 
-                    Product.AddItem();
+                    Product.CreateItem();
                     break;
-                //case 3:
-                //    RemoveItem();
-                //    break;
-                //default:
-                //    Menu();
+                case 3:
+                    Product.addQuantity();
+                    break;
+                case 4:
+                    Product.RemoveQuantity();
+                    break;
+                default:
+                    Menu();
+                    break;
             }
         }
         
