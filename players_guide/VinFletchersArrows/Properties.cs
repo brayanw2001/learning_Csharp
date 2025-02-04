@@ -4,15 +4,15 @@ namespace VinFletchersArrows
 {
     internal enum ArrowHeadType
     {
-        steel,
-        wood,
-        obsidian
+        steel = 10,
+        wood = 3,
+        obsidian = 5
     }
 
     internal enum FletchingType
     {
-        plastic,
-        turkeyFeathers,
-        gooseFeathers
+        plastic = 10,
+        turkeyFeathers = 5,
+        gooseFeathers = 3
     }
 }

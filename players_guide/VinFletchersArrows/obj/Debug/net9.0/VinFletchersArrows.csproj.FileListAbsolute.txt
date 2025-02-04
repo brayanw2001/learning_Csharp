@@ -3,3 +3,13 @@
 /home/brayan/Projects/pessoal/learning_Csharp/players_guide/VinFletchersArrows/obj/Debug/net9.0/VinFletchersArrows.AssemblyInfo.cs
 /home/brayan/Projects/pessoal/learning_Csharp/players_guide/VinFletchersArrows/obj/Debug/net9.0/VinFletchersArrows.csproj.CoreCompileInputs.cache
 /home/brayan/Projects/pessoal/learning_Csharp/players_guide/VinFletchersArrows/obj/Debug/net9.0/VinFletchersArrows.sourcelink.json
+/home/brayan/Projects/pessoal/learning_Csharp/players_guide/VinFletchersArrows/bin/Debug/net9.0/VinFletchersArrows
+/home/brayan/Projects/pessoal/learning_Csharp/players_guide/VinFletchersArrows/bin/Debug/net9.0/VinFletchersArrows.deps.json
+/home/brayan/Projects/pessoal/learning_Csharp/players_guide/VinFletchersArrows/bin/Debug/net9.0/VinFletchersArrows.runtimeconfig.json
+/home/brayan/Projects/pessoal/learning_Csharp/players_guide/VinFletchersArrows/bin/Debug/net9.0/VinFletchersArrows.dll
+/home/brayan/Projects/pessoal/learning_Csharp/players_guide/VinFletchersArrows/bin/Debug/net9.0/VinFletchersArrows.pdb
+/home/brayan/Projects/pessoal/learning_Csharp/players_guide/VinFletchersArrows/obj/Debug/net9.0/VinFletchersArrows.dll
+/home/brayan/Projects/pessoal/learning_Csharp/players_guide/VinFletchersArrows/obj/Debug/net9.0/refint/VinFletchersArrows.dll
+/home/brayan/Projects/pessoal/learning_Csharp/players_guide/VinFletchersArrows/obj/Debug/net9.0/VinFletchersArrows.pdb
+/home/brayan/Projects/pessoal/learning_Csharp/players_guide/VinFletchersArrows/obj/Debug/net9.0/VinFletchersArrows.genruntimeconfig.cache
+/home/brayan/Projects/pessoal/learning_Csharp/players_guide/VinFletchersArrows/obj/Debug/net9.0/ref/VinFletchersArrows.dll
