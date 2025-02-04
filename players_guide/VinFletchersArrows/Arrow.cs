@@ -2,30 +2,52 @@ namespace VinFletchersArrows
 {
     internal class Arrow
     {
-        public int arrowHead;
-        public int fletching;
+        public int arrowHeadCost;
+        public int fletchingCost;
         public int lenght;
 
-        public Arrow(int arrowHead, int fletching, int lenght)
+        public string arrowHead;
+        public string fletching;
+
+        public Arrow(int arrowHeadCost, int fletchingCost, int lenght)
         {
-            switch (arrowHead)
+            switch (arrowHeadCost)
             {
-                case 1: this.arrowHead = (int)ArrowHeadType.steel; break;
-                case 2: this.arrowHead = (int)ArrowHeadType.wood; break;
-                case 3: this.arrowHead = (int)ArrowHeadType.obsidian; break;
+                case 1: 
+                    this.arrowHeadCost = (int)ArrowHeadType.steel;
+                    this.arrowHead = nameof(ArrowHeadType.steel);
+                    break;
+                case 2: 
+                    this.arrowHeadCost = (int)ArrowHeadType.wood;
+                    this.arrowHead = nameof(ArrowHeadType.wood);
+                    break;
+                case 3: 
+                    this.arrowHeadCost = (int)ArrowHeadType.obsidian;
+                    this.arrowHead = nameof(ArrowHeadType.obsidian);
+                    break;
             }
-            switch (fletching)
+            switch (fletchingCost)
             {
-                case 1: this.fletching = (int)FletchingType.plastic; break; //nameof(FletchingType.plastic); break;
-                case 2: this.fletching = (int)FletchingType.turkeyFeathers; break;
-                case 3: this.fletching = (int)FletchingType.gooseFeathers; break;
+                case 1:
+                    this.fletchingCost = (int)FletchingType.plastic;
+                    this.fletching = nameof(FletchingType.plastic);
+                    break;
+                case 2:
+                    this.fletchingCost = (int)FletchingType.turkeyFeathers;
+                    this.fletching = nameof(FletchingType.turkeyFeathers);
+                    break;
+                case 3: 
+                    this.fletchingCost = (int)FletchingType.gooseFeathers;
+                    this.fletching = nameof(FletchingType.gooseFeathers);
+                    break;
             }
             this.lenght = lenght;
         }
 
         public void GetCost ()
         {
-            System.Console.WriteLine($"Arrow cost: {arrowHead+fletching+(lenght*0.05)}");
+            System.Console.WriteLine($"You choosed: {arrowHead}, {fletching}, {lenght}cm");
+            System.Console.WriteLine($"Arrow cost: ${arrowHeadCost+fletchingCost+(lenght*0.05)}");
         }
     }
 }
