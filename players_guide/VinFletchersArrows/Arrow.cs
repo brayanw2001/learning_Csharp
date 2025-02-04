@@ -1,26 +1,24 @@
-using Properties;
-
 namespace VinFletchersArrows
 {
     internal class Arrow
     {
-        private string arrowHead;
-        private string fletching;
-        private int lenght;
+        public string arrowHead;
+        public string fletching;
+        public int lenght;
 
         public Arrow(int arrowHead, int fletching, int lenght)
         {
             switch (arrowHead)
             {
-                case 1: this.arrowHead = ArrowHeadType.steel; break;
-                case 2: this.arrowHead = ArrowHeadType.wood; break;
-                case 3: this.arrowHead = ArrowHeadType.obsidian; break;
+                case 1: this.arrowHead = nameof(ArrowHeadType.steel); break;
+                case 2: this.arrowHead = nameof(ArrowHeadType.wood); break;
+                case 3: this.arrowHead = nameof(ArrowHeadType.obsidian); break;
             }
             switch (fletching)
             {
-                case 1: this.arrowHead = ArrowHeadType.plastic; break;
-                case 2: this.arrowHead = ArrowHeadType.turkeyFeathers; break;
-                case 3: this.arrowHead = ArrowHeadType.gooseFeathers; break;
+                case 1: this.fletching = nameof(FletchingType.plastic); break;
+                case 2: this.fletching = nameof(FletchingType.turkeyFeathers); break;
+                case 3: this.fletching = nameof(FletchingType.gooseFeathers); break;
             }
             this.lenght = lenght;
         }

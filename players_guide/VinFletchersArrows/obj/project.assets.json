@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/brayan/Projects/pessoal/learning_Csharp/VinFletchersArrows/VinFletchersArrows.csproj",
+      "projectUniqueName": "/home/brayan/Projects/pessoal/learning_Csharp/players_guide/VinFletchersArrows/VinFletchersArrows.csproj",
       "projectName": "VinFletchersArrows",
-      "projectPath": "/home/brayan/Projects/pessoal/learning_Csharp/VinFletchersArrows/VinFletchersArrows.csproj",
+      "projectPath": "/home/brayan/Projects/pessoal/learning_Csharp/players_guide/VinFletchersArrows/VinFletchersArrows.csproj",
       "packagesPath": "/home/brayan/.nuget/packages/",
-      "outputPath": "/home/brayan/Projects/pessoal/learning_Csharp/VinFletchersArrows/obj/",
+      "outputPath": "/home/brayan/Projects/pessoal/learning_Csharp/players_guide/VinFletchersArrows/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/brayan/.nuget/NuGet/NuGet.Config"

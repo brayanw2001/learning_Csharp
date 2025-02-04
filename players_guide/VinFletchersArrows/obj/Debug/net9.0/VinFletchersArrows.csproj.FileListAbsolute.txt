@@ -1,0 +1,5 @@
+/home/brayan/Projects/pessoal/learning_Csharp/players_guide/VinFletchersArrows/obj/Debug/net9.0/VinFletchersArrows.GeneratedMSBuildEditorConfig.editorconfig
+/home/brayan/Projects/pessoal/learning_Csharp/players_guide/VinFletchersArrows/obj/Debug/net9.0/VinFletchersArrows.AssemblyInfoInputs.cache
+/home/brayan/Projects/pessoal/learning_Csharp/players_guide/VinFletchersArrows/obj/Debug/net9.0/VinFletchersArrows.AssemblyInfo.cs
+/home/brayan/Projects/pessoal/learning_Csharp/players_guide/VinFletchersArrows/obj/Debug/net9.0/VinFletchersArrows.csproj.CoreCompileInputs.cache
+/home/brayan/Projects/pessoal/learning_Csharp/players_guide/VinFletchersArrows/obj/Debug/net9.0/VinFletchersArrows.sourcelink.json

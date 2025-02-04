@@ -1,18 +1,30 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace VinFletchersArrows
 {
-    System.Console.WriteLine("[1]- Steel \n [2] - Wood \n [3] - Obsidian");
-    int choosedArrow = System.Console.WriteLine("Choose a arrow head: ");
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("[1]- Steel \n [2] - Wood \n [3] - Obsidian");
+            System.Console.WriteLine("Choose a arrow head: ");
+            int choosedArrow =  int.Parse(Console.ReadLine());
 
-    Console.clear();
+            Console.clear();
 
-    System.Console.WriteLine("[1]- Plastic \n [2] - Turkey Feathers \n [3] - Goose Feathers");
-    int choosedFLetching = System.Console.WriteLine("Choose the fletching head: ");    
+            Console.WriteLine($"[1]- Plastic \n [2] - Turkey Feathers \n [3] - Goose Feathers");
+            System.Console.WriteLine("Choose the fletching head: ");    
+            int choosedFLetching = int.Parse(Console.ReadLine());
 
-    Console.clear();
+            Console.clear();
 
-    System.Console.WriteLine("Whats the lenght of the shaft? (between 60cm and 100cm long): ");
-    int choosedLenght = int.Parse(Console.ReadLine());
+            Console.WriteLine("Whats the lenght of the shaft? (between 60cm and 100cm long): ");
+            int choosedLenght = int.Parse(Console.ReadLine());
+        }
 
+    }
 }
