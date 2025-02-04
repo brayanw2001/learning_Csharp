@@ -2,12 +2,11 @@ namespace VinFletchersArrows
 {
     internal class Arrow
     {
-        public int arrowHeadCost;
-        public int fletchingCost;
-        public int lenght;
-
-        public string arrowHead;
-        public string fletching;
+        private int arrowHeadCost;
+        private int fletchingCost;
+        private int lenght;
+        private string arrowHead;
+        private string fletching;
 
         public Arrow(int arrowHeadCost, int fletchingCost, int lenght)
         {
@@ -49,5 +48,9 @@ namespace VinFletchersArrows
             System.Console.WriteLine($"You choosed: {arrowHead}, {fletching}, {lenght}cm");
             System.Console.WriteLine($"Arrow cost: ${arrowHeadCost+fletchingCost+(lenght*0.05)}");
         }
+
+        public string GetArrowHead => arrowHead;
+        public string GetFletching => fletching;
+        public int GetLenght => lenght;
     }
 }
