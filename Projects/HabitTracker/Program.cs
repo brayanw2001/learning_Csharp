@@ -16,7 +16,7 @@ namespace habit_tracker
 
                 tableCmd.CommandText = 
                 @"CREATE TABLE IF NOT EXISTS drinking_water (
-                    Id INTEGER PRIMARY KEY AUTOINCREMENT
+                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
                     Date TEXT,
                     Quantitty INTEGER
                     )";
