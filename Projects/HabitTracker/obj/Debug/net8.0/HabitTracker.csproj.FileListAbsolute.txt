@@ -1,0 +1,15 @@
+/home/brayan/Projects/pessoal/learning_Csharp/Projects/HabitTracker/bin/Debug/net8.0/HabitTracker
+/home/brayan/Projects/pessoal/learning_Csharp/Projects/HabitTracker/bin/Debug/net8.0/HabitTracker.deps.json
+/home/brayan/Projects/pessoal/learning_Csharp/Projects/HabitTracker/bin/Debug/net8.0/HabitTracker.runtimeconfig.json
+/home/brayan/Projects/pessoal/learning_Csharp/Projects/HabitTracker/bin/Debug/net8.0/HabitTracker.dll
+/home/brayan/Projects/pessoal/learning_Csharp/Projects/HabitTracker/bin/Debug/net8.0/HabitTracker.pdb
+/home/brayan/Projects/pessoal/learning_Csharp/Projects/HabitTracker/obj/Debug/net8.0/HabitTracker.GeneratedMSBuildEditorConfig.editorconfig
+/home/brayan/Projects/pessoal/learning_Csharp/Projects/HabitTracker/obj/Debug/net8.0/HabitTracker.AssemblyInfoInputs.cache
+/home/brayan/Projects/pessoal/learning_Csharp/Projects/HabitTracker/obj/Debug/net8.0/HabitTracker.AssemblyInfo.cs
+/home/brayan/Projects/pessoal/learning_Csharp/Projects/HabitTracker/obj/Debug/net8.0/HabitTracker.csproj.CoreCompileInputs.cache
+/home/brayan/Projects/pessoal/learning_Csharp/Projects/HabitTracker/obj/Debug/net8.0/HabitTracker.sourcelink.json
+/home/brayan/Projects/pessoal/learning_Csharp/Projects/HabitTracker/obj/Debug/net8.0/HabitTracker.dll
+/home/brayan/Projects/pessoal/learning_Csharp/Projects/HabitTracker/obj/Debug/net8.0/refint/HabitTracker.dll
+/home/brayan/Projects/pessoal/learning_Csharp/Projects/HabitTracker/obj/Debug/net8.0/HabitTracker.pdb
+/home/brayan/Projects/pessoal/learning_Csharp/Projects/HabitTracker/obj/Debug/net8.0/HabitTracker.genruntimeconfig.cache
+/home/brayan/Projects/pessoal/learning_Csharp/Projects/HabitTracker/obj/Debug/net8.0/ref/HabitTracker.dll
