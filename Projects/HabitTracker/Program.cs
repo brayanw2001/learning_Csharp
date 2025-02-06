@@ -2,13 +2,13 @@
 using Microsoft.Data.Sqlite;
 
 namespace habit_tracker
-{
+{    
     class Program
     {
+        static string connectionString = @"Data Source = HabitTracker.db";
+
         static void Main(string[] args)
         {
-            string connectionString = @"Data Source = HabitTracker.db";
-
             using (var connection = new SqliteConnection(connectionString))
             {
                 connection.Open();
@@ -25,6 +25,8 @@ namespace habit_tracker
 
                 connection.Close();
             }
+
+            GetUserInput();
         }
 
         static void GetUserInput()
@@ -51,18 +53,18 @@ namespace habit_tracker
                         Console.WriteLine("\nGoodbye!\n");
                         closeApp = true;
                         break;
-                    case "1":
-                        GetAllRecords();
-                        break;
+                    //case "1":
+                    //    GetAllRecords();
+                    //    break;
                     case "2":
                         Insert();
                         break;
-                    case "3":
-                        Delete();
-                        break;
-                    case "4":
-                        Update();
-                        break;
+                   // case "3":
+                   //     Delete();
+                   //     break;
+                   // case "4":
+                   //     Update();
+                   //     break;
                     default:
                         Console.WriteLine("\nInvalid command. Please, type a number from 0 to 4.\n");
                         break;
@@ -74,7 +76,15 @@ namespace habit_tracker
         {
             string date = GetDateInput();
 
-            int quantity = GetNumberInput("Please insert number of glasses or other integer measure")
+            int quantity = GetNumberInput("Please insert number of glasses or other integer measure");
+        
+            using (var connection = new SqliteConnection(connectionString))
+            {
+                connection.Open();
+                var tableCmd = connection.CreateCommand();
+                tableCmd.CommandText = 
+                $"INSERT INTO drinking_wate(date, quantity) VALUES('{date}', '{quantity}')";
+            }
         }
 
         private static string GetDateInput()
@@ -83,16 +93,20 @@ namespace habit_tracker
 
             string dateInput = Console.ReadLine();
 
-            if (dateInput == '0') GetUserInput();
+            if (dateInput == "0") GetUserInput();
 
             return dateInput;
         }
 
         internal static int GetNumberInput(string message)
         {
-            int numberInput = int.Parse(Console.ReadLine());
+            System.Console.WriteLine(message);
+
+            string numberInput = Console.ReadLine();
             
-            if (numberInput == 0) GetUserInput();
+            if (numberInput == "0") GetUserInput();
+
+            int finalInput = Convert.ToInt32(numberInput);
 
             return finalInput;          // 15:54
         }
