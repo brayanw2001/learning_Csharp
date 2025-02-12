@@ -1,0 +1,15 @@
+/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/ThePoint/obj/Debug/net8.0/ThePoint.GeneratedMSBuildEditorConfig.editorconfig
+/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/ThePoint/obj/Debug/net8.0/ThePoint.AssemblyInfoInputs.cache
+/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/ThePoint/obj/Debug/net8.0/ThePoint.AssemblyInfo.cs
+/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/ThePoint/obj/Debug/net8.0/ThePoint.csproj.CoreCompileInputs.cache
+/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/ThePoint/obj/Debug/net8.0/ThePoint.sourcelink.json
+/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/ThePoint/bin/Debug/net8.0/ThePoint
+/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/ThePoint/bin/Debug/net8.0/ThePoint.deps.json
+/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/ThePoint/bin/Debug/net8.0/ThePoint.runtimeconfig.json
+/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/ThePoint/bin/Debug/net8.0/ThePoint.dll
+/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/ThePoint/bin/Debug/net8.0/ThePoint.pdb
+/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/ThePoint/obj/Debug/net8.0/ThePoint.dll
+/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/ThePoint/obj/Debug/net8.0/refint/ThePoint.dll
+/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/ThePoint/obj/Debug/net8.0/ThePoint.pdb
+/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/ThePoint/obj/Debug/net8.0/ThePoint.genruntimeconfig.cache
+/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/ThePoint/obj/Debug/net8.0/ref/ThePoint.dll
