@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "p9ohzAY7iFw=",
+  "success": true,
+  "projectFilePath": "/home/brayan/Projects/pessoal/learning_Csharp/Projects/CSVtoYAML/CSVtoYAML.csproj",
+  "expectedPackageFiles": [
+    "/home/brayan/.nuget/packages/csvhelper/33.0.1/csvhelper.33.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
