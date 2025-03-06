@@ -17,6 +17,12 @@ class Program
             using (var csvReader = new CsvReader(StreamReader, CultureInfo.InvariantCulture))
             {
                 var records = csvReader.GetRecords<IOs>().ToList();
+
+                foreach (var record in records)
+                {
+                    YamlConstructor yamlConstructor = new YamlConstructor(record.modEntrada, record.modSaida, record.areaEntrada, record.areaSaida);
+                    yamlConstructor.BinarySensorGenerator();
+                }
             }
         }
     }
