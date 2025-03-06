@@ -12,6 +12,7 @@ namespace CSVtoYAML
         private string modSaida { get; }
         private string areaEntrada { get; }
         private string areaSaida { get; }
+        private static int number = 16;
 
         public YamlConstructor(string modEntrada, string modSaida, string areaEntrada, string areaSaida)
         {
@@ -24,7 +25,19 @@ namespace CSVtoYAML
 
         public void BinarySensorGenerator()
         {
-            Console.WriteLine($"  - platform: gpio\r\n    name: {areaEntrada}\r\n    id: {modEntrada}\r\n    pin:\r\n      mcp23xxx: IDC_M1_MCP4_I2CA_IN\r\n      number: 14\r\n      mode: INPUT\r\n      inverted: True\r\n    on_multi_click:\r\n    - timing:\r\n       - ON for at least 100ms\r\n      then:\r\n        - light.toggle: {modSaida}\n");
+            Console.WriteLine($"  - platform: gpio\r\n    name: {areaEntrada}\r\n    id: {modEntrada}\r\n    pin:\r\n      mcp23xxx: IDC_M1_MCP4_I2CA_IN\r\n      number: {NumberCount(modEntrada)}\r\n      mode: INPUT\r\n      inverted: True\r\n    on_multi_click:\r\n    - timing:\r\n       - ON for at least 100ms\r\n      then:\r\n        - light.toggle: {modSaida}\n");
+        }
+
+        private int NumberCount(string modEntrada)
+        {
+            int multiplier = -1;
+
+            if (modEntrada.Contains("E1"))
+            {
+                number = 0;
+                multiplier *= -1;
+            }
+                return number += multiplier;
         }
     }
 }
