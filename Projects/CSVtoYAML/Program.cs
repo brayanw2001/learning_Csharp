@@ -22,7 +22,7 @@ class Program
 
                 foreach (var record in records)
                 {
-                    YamlConstructor yamlConstructor = new YamlConstructor(record.modEntrada.Replace(" ", "_INPUT_"), record.modSaida.Replace(" ", "_OUTPUT_"), record.areaEntrada, record.areaSaida);
+                    YamlConstructor yamlConstructor = new YamlConstructor(record.modEntrada, record.modSaida, record.areaEntrada, record.areaSaida);
                     yamlConstructor.BinarySensorGenerator();
                 }
             }
