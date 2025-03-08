@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CSVtoYAML")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be721a7158867a9efabceb30d34ec611cf2a36a4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd8f93fb02eab2f3a9340c4c0c154a501105f699")]
 [assembly: System.Reflection.AssemblyProductAttribute("CSVtoYAML")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CSVtoYAML")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

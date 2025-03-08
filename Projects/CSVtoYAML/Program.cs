@@ -25,6 +25,14 @@ class Program
                     YamlConstructor yamlConstructor = new YamlConstructor(record.modEntrada, record.modSaida, record.areaEntrada, record.areaSaida);
                     yamlConstructor.BinarySensorGenerator();
                 }
+
+                Console.WriteLine("output:");
+
+                foreach (var record in records)
+                {
+                    YamlConstructor yamlConstructor = new YamlConstructor(record.modEntrada, record.modSaida, record.areaEntrada, record.areaSaida);
+                    yamlConstructor.OutputGenerator();
+                }
             }
         }
     }
