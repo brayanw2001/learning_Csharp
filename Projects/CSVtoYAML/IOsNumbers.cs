@@ -20,13 +20,15 @@ namespace CSVtoYAML
             {"H1", "12"}, {"H2", "13"}, {"H3", "14"}, {"H4", "15"}
         };
 
-        public string returnPinNumber(string modEntrada)
+        public string ReturnPinNumber(string modEntrada)
         {
-            foreach (var number in numbers)
+            string[] borneTerminal = modEntrada.Split(' ');
+
+            if (numbers.TryGetValue(borneTerminal[borneTerminal.Length - 1], out string? pinNumber))
             {
-                if (modEntrada.Contains(number.Key))
-                    return number.Value;
+                return pinNumber;
             }
+
             return "NULL";
         }
     }
