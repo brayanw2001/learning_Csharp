@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using Microsoft.Data.Sqlite;
 
 namespace habit_tracker
@@ -53,9 +54,9 @@ namespace habit_tracker
                         Console.WriteLine("\nGoodbye!\n");
                         closeApp = true;
                         break;
-                    //case "1":
-                    //    GetAllRecords();
-                    //    break;
+                    case "1":
+                        GetAllRecords();
+                        break;
                     case "2":
                         Insert();
                         break;
@@ -72,6 +73,50 @@ namespace habit_tracker
             }
         }
 
+      
+        private static void GetAllRecords()
+        {
+            Console.Clear();
+
+            using (var connection = new SqliteConnection(connectionString))
+            {
+                connection.Open();
+                var tableCmd = connection.CreateCommand();
+                tableCmd.CommandText =
+                    $"SELECT * FROM drinking_water";
+
+                List<DrinkingWater> tableData = new();
+                SqliteDataReader reader = tableCmd.ExecuteReader();         // ExecuteReadder -> lê resultado linha por linha
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        tableData.Add(
+                            new DrinkingWater
+                            {
+                                Id = reader.GetInt32(0),
+                                Date = DateTime.ParseExact(reader.GetString(1), "dd-MM-yy", new CultureInfo("en-US")),
+                                Quantity = reader.GetInt32(2)
+                            });
+                    }
+                }
+                else 
+                {
+                    Console.WriteLine("No rows found");
+                }
+
+                connection.Close();
+                Console.WriteLine("--------------------\n");
+
+                foreach (var dw in tableData)
+                {
+                    Console.WriteLine($"{dw.Id} - {dw.Date.ToString("dd-MMM-yyyy")} - Quantity: {dw.Quantity} glasses");
+                }
+                Console.WriteLine("--------------------\n");
+            }
+        }
+        
         private static void Insert()
         {
             string date = GetDateInput();
@@ -83,7 +128,11 @@ namespace habit_tracker
                 connection.Open();
                 var tableCmd = connection.CreateCommand();
                 tableCmd.CommandText = 
-                $"INSERT INTO drinking_wate(date, quantity) VALUES('{date}', '{quantity}')";
+                $"INSERT INTO drinking_water(date, quantity) VALUES('{date}', '{quantity}')";
+
+                tableCmd.ExecuteNonQuery();
+
+                connection.Close();
             }
         }
 
@@ -110,5 +159,11 @@ namespace habit_tracker
 
             return finalInput;          // 15:54
         }
+    }
+    public class DrinkingWater
+    {
+        public int Id { get; set; }
+        public DateTime Date { get; set; }
+        public int Quantity { get; set; }
     }
 }
