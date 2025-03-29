@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,7 @@ namespace CSVtoYAML
             {"H1", "12"}, {"H2", "13"}, {"H3", "14"}, {"H4", "15"}
         };
 
-        public string ReturnPinNumber(string modEntrada)
+        public string PinNumber(string modEntrada)
         {
             string[] borneTerminal = modEntrada.Split(' ');
 

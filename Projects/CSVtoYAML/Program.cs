@@ -5,33 +5,40 @@ using System.Globalization;
 using System.Linq;
 using CsvHelper.Configuration;
 using CsvHelper.Configuration.Attributes;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace CSVtoYAML;
 
 class Program
 {
     static void Main(string[] args)
     {
-        //using (var StreamReader = new StreamReader(@"/home/brayan/Documentos/CSVs_mapeamentos/101.csv"))
-        using (var StreamReader = new StreamReader(@"C:\Users\braya\OneDrive\Documentos\Projects\UNISEC\Empreendimentos\Chateau Meirelles\101 (3).csv"))
+        Console.WriteLine("Insira o diretório do arquivo:");
+        string diretorio = Console.ReadLine();
+
+        using (var StreamReader = new StreamReader($@"{diretorio}"))
         {
             using (var csvReader = new CsvReader(StreamReader, CultureInfo.InvariantCulture))
             {
                 var records = csvReader.GetRecords<IOs>().ToList();
 
+                Mcps mcp = new Mcps();
+                
+                System.Console.WriteLine(mcp.ComponentMCP());
                 Console.WriteLine("binary_sensor:");
 
                 foreach (var record in records)
                 {
-                    YamlConstructor yamlConstructor = new YamlConstructor(record.modEntrada, record.modSaida, record.areaEntrada, record.areaSaida);
-                    yamlConstructor.BinarySensorGenerator();
+                    BinarySensors binarySensor = new BinarySensors(record.modEntrada, record.areaEntrada);
+                    Output output = new Output(record.modSaida);
+                    Console.WriteLine($"  - platform: gpio\r\n    name: {binarySensor.name}\r\n    id: {binarySensor.id}\r\n    pin:\r\n      mcp23xxx: XXXXXXX\r\n      number: {binarySensor.number}\r\n      mode: INPUT\r\n      inverted: {binarySensor.inverted}\r\n    on_multi_click:\r\n      - timing:\r\n        - ON for at least 100ms\r\n        then:\r\n          - light.toggle: {output.id} \n");
                 }
 
                 Console.WriteLine("output:");
 
                 foreach (var record in records)
                 {
-                    YamlConstructor yamlConstructor = new YamlConstructor(record.modEntrada, record.modSaida, record.areaEntrada, record.areaSaida);
-                    yamlConstructor.OutputGenerator();
+                    Output output = new Output(record.modSaida, record.areaEntrada);
+                    Console.WriteLine($"  - platform: gpio\r\n    id: {output.id}\r\n    pin:\r\n      mcp23xxx: XXXXXXX\r\n      number: {output.number}\r\n      mode: INPUT\r\n      inverted: {output.inverted}\r\n");
                 }
             }
         }
