@@ -15,11 +15,11 @@ public class Output
 
     public Output(string modSaida, string areaSaida)
     {
-        IOsNumbers inputNumber = new IOsNumbers();
+        IOsNumbers outputNumber = new IOsNumbers();
 
         platform = "gpio";
         id = modSaida.Replace(" ", "_OUTPUT_");
-        number = "TROCAR";
+        number = outputNumber.PinNumberOutput(modSaida);
         inverted = false;
     }
 

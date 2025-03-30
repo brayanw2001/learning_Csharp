@@ -20,7 +20,7 @@ namespace CSVtoYAML;
         platform = "gpio";
         name = "Tecla" + " " + areaEntrada;
         id = modEntrada.Replace(" ", "_INPUT_");
-        number = inputNumber.PinNumber(modEntrada);
+        number = inputNumber.PinNumberInput(modEntrada);
         inverted = false;
     }
 
