@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("CSVtoYAML")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("VinFletchersArrows")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80b7fb63f165925a236174af311d677bed7ade89")]
-[assembly: System.Reflection.AssemblyProductAttribute("CSVtoYAML")]
-[assembly: System.Reflection.AssemblyTitleAttribute("CSVtoYAML")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyProductAttribute("VinFletchersArrows")]
+[assembly: System.Reflection.AssemblyTitleAttribute("VinFletchersArrows")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.

@@ -30,7 +30,7 @@ class Program
                     BinarySensors binarySensor = new BinarySensors(record.modEntrada, record.areaEntrada);
                     Output output = new Output(record.modSaida);
                     Mcps mcp = new Mcps(record.modEntrada);
-                    Console.WriteLine($"  - platform: gpio\r\n    name: {binarySensor.name}\r\n    id: {binarySensor.id}\r\n    pin:\r\n      mcp23xxx: {mcp.mcp23xxx}\r\n      number: {binarySensor.number}\r\n      mode: INPUT\r\n      inverted: {binarySensor.inverted}\r\n    on_multi_click:\r\n      - timing:\r\n        - ON for at least 100ms\r\n        then:\r\n          - light.toggle: {output.id} \n");
+                    Console.WriteLine($"  - platform: gpio\r\n    name: {binarySensor.name}\r\n    id: {binarySensor.id}\r\n    pin:\r\n      mcp23xxx: IDC_{record.modEntrada.Split(" ")[0]}_{mcp.mcp23xxx}_I2CA_IN\r\n      number: {binarySensor.number}\r\n      mode: INPUT\r\n      inverted: {binarySensor.inverted}\r\n    on_multi_click:\r\n      - timing:\r\n        - ON for at least 100ms\r\n        then:\r\n          - light.toggle: {output.id} \n");
                 }
 
                 Console.WriteLine("output:");

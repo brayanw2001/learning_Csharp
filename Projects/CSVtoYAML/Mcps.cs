@@ -7,7 +7,6 @@ namespace CSVtoYAML
 {
     public class Mcps
     {
-        // fazer chave valor. Se M1 = 0x23 e etc
         string [] idcMcps = new string[] { "0x21", "0x24", "0x21", "0x26"}; // toda vez que detecta mudança em Mx ou _input_Ex, incrementa 1
         string [] oacMcps = new string[] { "0x20", "0x21", "0x22", "0x23", "0x24", "0x25", "0x26", "0x27"};
         public readonly string? mcp23xxx;
