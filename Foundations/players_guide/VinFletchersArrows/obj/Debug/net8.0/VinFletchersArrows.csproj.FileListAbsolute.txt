@@ -12,3 +12,18 @@ C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\VinFletch
 C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\VinFletchersArrows\obj\Debug\net8.0\VinFletchersArrows.pdb
 C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\VinFletchersArrows\obj\Debug\net8.0\VinFletchersArrows.genruntimeconfig.cache
 C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\VinFletchersArrows\obj\Debug\net8.0\ref\VinFletchersArrows.dll
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\VinFletchersArrows\bin\Debug\net8.0\VinFletchersArrows.exe
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\VinFletchersArrows\bin\Debug\net8.0\VinFletchersArrows.deps.json
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\VinFletchersArrows\bin\Debug\net8.0\VinFletchersArrows.runtimeconfig.json
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\VinFletchersArrows\bin\Debug\net8.0\VinFletchersArrows.dll
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\VinFletchersArrows\bin\Debug\net8.0\VinFletchersArrows.pdb
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\VinFletchersArrows\obj\Debug\net8.0\VinFletchersArrows.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\VinFletchersArrows\obj\Debug\net8.0\VinFletchersArrows.AssemblyInfoInputs.cache
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\VinFletchersArrows\obj\Debug\net8.0\VinFletchersArrows.AssemblyInfo.cs
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\VinFletchersArrows\obj\Debug\net8.0\VinFletchersArrows.csproj.CoreCompileInputs.cache
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\VinFletchersArrows\obj\Debug\net8.0\VinFletchersArrows.sourcelink.json
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\VinFletchersArrows\obj\Debug\net8.0\VinFletchersArrows.dll
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\VinFletchersArrows\obj\Debug\net8.0\refint\VinFletchersArrows.dll
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\VinFletchersArrows\obj\Debug\net8.0\VinFletchersArrows.pdb
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\VinFletchersArrows\obj\Debug\net8.0\VinFletchersArrows.genruntimeconfig.cache
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\VinFletchersArrows\obj\Debug\net8.0\ref\VinFletchersArrows.dll

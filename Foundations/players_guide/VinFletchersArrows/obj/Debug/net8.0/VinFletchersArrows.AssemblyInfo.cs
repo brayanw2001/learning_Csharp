@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VinFletchersArrows")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1b6fcb32dbddca0f43476c1ba395bcf4b17341d")]
 [assembly: System.Reflection.AssemblyProductAttribute("VinFletchersArrows")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VinFletchersArrows")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
