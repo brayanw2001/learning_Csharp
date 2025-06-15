@@ -8,9 +8,9 @@ namespace VinFletchersArrows
 {
     internal class Arrow
     {
-        private Arrowhead arrowheadType;
-        private Fletching fletchingType;
-        private float length;
+        private Arrowhead arrowheadType { get; }
+        private Fletching fletchingType { get; }
+        private float length { get; }
 
         internal Arrow (Arrowhead arrowheadType, Fletching fletchingType, float length)
         {
@@ -18,10 +18,6 @@ namespace VinFletchersArrows
             this.fletchingType = fletchingType;
             this.length = length;
         }
-
-        Arrowhead GetArrowheadType() => this.arrowheadType;
-        Fletching GetFletchingType() => this.fletchingType;
-        float getLength() => this.length;
 
         internal float GetCost ()
         {

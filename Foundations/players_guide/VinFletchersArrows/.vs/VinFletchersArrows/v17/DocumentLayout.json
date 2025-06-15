@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\braya\\OneDrive\\Documentos\\Estudos\\learning_Csharp\\Foundations\\players_guide\\VinFletchersArrows\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F0B04332-60A5-4951-AEFB-79262F7B4181}|VinFletchersArrows.csproj|c:\\users\\braya\\onedrive\\documentos\\estudos\\learning_csharp\\foundations\\players_guide\\vinfletchersarrows\\arrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0B04332-60A5-4951-AEFB-79262F7B4181}|VinFletchersArrows.csproj|solutionrelative:arrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F0B04332-60A5-4951-AEFB-79262F7B4181}|VinFletchersArrows.csproj|c:\\users\\braya\\onedrive\\documentos\\estudos\\learning_csharp\\foundations\\players_guide\\vinfletchersarrows\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F0B04332-60A5-4951-AEFB-79262F7B4181}|VinFletchersArrows.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F0B04332-60A5-4951-AEFB-79262F7B4181}|VinFletchersArrows.csproj|c:\\users\\braya\\onedrive\\documentos\\estudos\\learning_csharp\\foundations\\players_guide\\vinfletchersarrows\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F0B04332-60A5-4951-AEFB-79262F7B4181}|VinFletchersArrows.csproj|solutionrelative:enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F0B04332-60A5-4951-AEFB-79262F7B4181}|VinFletchersArrows.csproj|c:\\users\\braya\\onedrive\\documentos\\estudos\\learning_csharp\\foundations\\players_guide\\vinfletchersarrows\\arrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F0B04332-60A5-4951-AEFB-79262F7B4181}|VinFletchersArrows.csproj|solutionrelative:arrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,24 +22,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Arrow.cs",
               "DocumentMoniker": "C:\\Users\\braya\\OneDrive\\Documentos\\Estudos\\learning_Csharp\\Foundations\\players_guide\\VinFletchersArrows\\Arrow.cs",
               "RelativeDocumentMoniker": "Arrow.cs",
               "ToolTip": "C:\\Users\\braya\\OneDrive\\Documentos\\Estudos\\learning_Csharp\\Foundations\\players_guide\\VinFletchersArrows\\Arrow.cs",
               "RelativeToolTip": "Arrow.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBcAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAkwDUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-14T02:13:49.025Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Enums.cs",
               "DocumentMoniker": "C:\\Users\\braya\\OneDrive\\Documentos\\Estudos\\learning_Csharp\\Foundations\\players_guide\\VinFletchersArrows\\Enums.cs",
               "RelativeDocumentMoniker": "Enums.cs",
@@ -47,12 +47,11 @@
               "RelativeToolTip": "Enums.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T02:10:47.7Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-14T02:10:47.7Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\braya\\OneDrive\\Documentos\\Estudos\\learning_Csharp\\Foundations\\players_guide\\VinFletchersArrows\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
