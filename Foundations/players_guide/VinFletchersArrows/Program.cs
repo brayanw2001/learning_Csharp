@@ -4,9 +4,23 @@
     {
         static void Main(string[] args)
         {
-            Arrow arrow = new(AsksForArrow(), AsksForFletching(), AsksForLength());
+            Console.WriteLine("Would you like a [1] Predefined arrow or a [2] Custom arrow?");
+            if (Console.ReadLine() == "1")
+            {
+                Arrow predefinedArrow = AsksForPredefined();
+                Console.WriteLine($"It'll cost you: ${predefinedArrow.price}");
+            }
+            else if (Console.ReadLine() == "2")
+            {
+                Arrow arrow = new(AsksForArrow(), AsksForFletching(), AsksForLength());
+                Console.WriteLine($"\nIt'll cost you ${arrow.GetCost()}");
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine("Invalid option. Please, try again.");
+            }
 
-            Console.WriteLine($"\nIt'll cost you ${arrow.GetCost()}");
         }
 
         static Arrowhead AsksForArrow()
@@ -69,6 +83,32 @@
             } while (length < 60 || length > 100);
 
             return length;
+        }
+
+        static Arrow AsksForPredefined()
+        {
+            Console.WriteLine("[1] The Elite Arrow, [2] The Begginer Arrow or [3] The Marksman Arrow");
+            string answer = Console.ReadLine();
+
+            while (true)
+            {
+                switch (answer)
+                {
+                    case "1": 
+                        return Arrow.CreateEliteArrow();
+
+                    case "2": 
+                        return Arrow.CreateBeginnerArrow();
+
+                    case "3": 
+                        return Arrow.CreateMarksManArrow();
+
+                    default:
+                        Console.WriteLine("Invalid option. Please, try again");
+                        break;
+                }
+
+            }
         }
     }
 }

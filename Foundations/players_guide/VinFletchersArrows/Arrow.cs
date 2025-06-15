@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,6 +12,7 @@ namespace VinFletchersArrows
         private Arrowhead arrowheadType { get; }
         private Fletching fletchingType { get; }
         private float length { get; }
+        public readonly float price;
 
         internal Arrow (Arrowhead arrowheadType, Fletching fletchingType, float length)
         {
@@ -18,6 +20,18 @@ namespace VinFletchersArrows
             this.fletchingType = fletchingType;
             this.length = length;
         }
+
+        private Arrow(Arrowhead arrowheadType, Fletching fletchingType, float length, float price)
+        {
+            this.arrowheadType = arrowheadType;
+            this.fletchingType = fletchingType;
+            this.length = length;
+            this.price = price;
+        }
+
+        public static Arrow CreateEliteArrow() => new Arrow (Arrowhead.steel, Fletching.plastic, 95, 24.50f);
+        public static Arrow CreateBeginnerArrow() => new(Arrowhead.wood, Fletching.goose_feathers, 75, 9.50f); // Arrow pode ser omitido
+        public static Arrow CreateMarksManArrow() => new Arrow(Arrowhead.steel, Fletching.goose_feathers, 65, 16.00f);
 
         internal float GetCost ()
         {
