@@ -1,0 +1,14 @@
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\The Locked Door\bin\Debug\net8.0\The Locked Door.exe
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\The Locked Door\bin\Debug\net8.0\The Locked Door.deps.json
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\The Locked Door\bin\Debug\net8.0\The Locked Door.runtimeconfig.json
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\The Locked Door\bin\Debug\net8.0\The Locked Door.dll
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\The Locked Door\bin\Debug\net8.0\The Locked Door.pdb
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\The Locked Door\obj\Debug\net8.0\The Locked Door.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\The Locked Door\obj\Debug\net8.0\The Locked Door.AssemblyInfoInputs.cache
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\The Locked Door\obj\Debug\net8.0\The Locked Door.AssemblyInfo.cs
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\The Locked Door\obj\Debug\net8.0\The Locked Door.csproj.CoreCompileInputs.cache
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\The Locked Door\obj\Debug\net8.0\The Locked Door.dll
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\The Locked Door\obj\Debug\net8.0\refint\The Locked Door.dll
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\The Locked Door\obj\Debug\net8.0\The Locked Door.pdb
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\The Locked Door\obj\Debug\net8.0\The Locked Door.genruntimeconfig.cache
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\The Locked Door\obj\Debug\net8.0\ref\The Locked Door.dll
