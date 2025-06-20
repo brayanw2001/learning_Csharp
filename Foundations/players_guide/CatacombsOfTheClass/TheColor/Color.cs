@@ -1,36 +1,31 @@
-namespace TheColor;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-class Color
+namespace TheColor
 {
-    public int r { get; }
-    public int g { get; }
-    public int b { get; }
-
-    public struct White
+    class Color
     {
-        public static  readonly int r = 255;
-        public static readonly int g = 255;
-        public static readonly int b = 255;
-    }
+        internal int R { get; }
+        internal int G { get; }
+        internal int B { get; }
 
-    public struct Black
-    {
-        public static readonly int r = 0;
-        public static readonly int g = 0;
-        public static readonly int b = 0;
-    }
+        public Color(int red, int green, int blue)
+        {
+            R = red;
+            G = green;
+            B = blue;
+        }
 
-    public struct Red 
-    {
-        public static readonly int r = 255;
-        public static readonly int g = 0;
-        public static readonly int b = 0;
-    }
-
-    public Color(int r, int g, int b)
-    {
-        this.r = r;
-        this.g = g;
-        this.b = b;
+        internal static Color White() => new Color(255, 255, 255);
+        internal static Color Black() => new Color(0, 0, 0);
+        internal static Color Red() => new Color(255, 0, 0);
+        internal static Color Orange() => new Color(255, 165, 0);
+        internal static Color Yellow() => new Color(255, 255, 0);
+        internal static Color Green() => new Color(0, 128, 0);
+        internal static Color Blue() => new Color(0, 0, 255);
+        internal static Color Purple() => new Color(128, 0, 128);
     }
 }

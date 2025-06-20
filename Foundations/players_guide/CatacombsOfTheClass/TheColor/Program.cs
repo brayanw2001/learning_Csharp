@@ -1,11 +1,14 @@
-﻿namespace TheColor;
-
-class Program
+﻿namespace TheColor
 {
-    static void Main(string[] args)
+    internal class Program
     {
-        Color color = new Color(125, 200, 30);
-        
-        System.Console.WriteLine($"{color.r}, {color.g}, {color.b} | {Color.White.r}, {Color.White.g}, {Color.White.b}");
+        static void Main(string[] args)
+        {
+            Color customColor = new Color(127, 255, 0);
+            Color orange = Color.Orange();
+
+            Console.WriteLine($"({customColor.R}, {customColor.G}, {customColor.B})");
+            Console.WriteLine($"({orange.R}, {orange.G}, {orange.B})");
+        }
     }
 }

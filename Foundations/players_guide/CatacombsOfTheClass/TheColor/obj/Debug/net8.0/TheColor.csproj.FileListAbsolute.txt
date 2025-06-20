@@ -1,15 +1,14 @@
-/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/TheColor/obj/Debug/net8.0/TheColor.GeneratedMSBuildEditorConfig.editorconfig
-/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/TheColor/obj/Debug/net8.0/TheColor.AssemblyInfoInputs.cache
-/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/TheColor/obj/Debug/net8.0/TheColor.AssemblyInfo.cs
-/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/TheColor/obj/Debug/net8.0/TheColor.csproj.CoreCompileInputs.cache
-/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/TheColor/obj/Debug/net8.0/TheColor.sourcelink.json
-/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/TheColor/bin/Debug/net8.0/TheColor
-/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/TheColor/bin/Debug/net8.0/TheColor.deps.json
-/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/TheColor/bin/Debug/net8.0/TheColor.runtimeconfig.json
-/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/TheColor/bin/Debug/net8.0/TheColor.dll
-/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/TheColor/bin/Debug/net8.0/TheColor.pdb
-/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/TheColor/obj/Debug/net8.0/TheColor.dll
-/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/TheColor/obj/Debug/net8.0/refint/TheColor.dll
-/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/TheColor/obj/Debug/net8.0/TheColor.pdb
-/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/TheColor/obj/Debug/net8.0/TheColor.genruntimeconfig.cache
-/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/CatacombsOfTheClass/TheColor/obj/Debug/net8.0/ref/TheColor.dll
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\TheColor\bin\Debug\net8.0\TheColor.exe
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\TheColor\bin\Debug\net8.0\TheColor.deps.json
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\TheColor\bin\Debug\net8.0\TheColor.runtimeconfig.json
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\TheColor\bin\Debug\net8.0\TheColor.dll
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\TheColor\bin\Debug\net8.0\TheColor.pdb
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\TheColor\obj\Debug\net8.0\TheColor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\TheColor\obj\Debug\net8.0\TheColor.AssemblyInfoInputs.cache
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\TheColor\obj\Debug\net8.0\TheColor.AssemblyInfo.cs
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\TheColor\obj\Debug\net8.0\TheColor.csproj.CoreCompileInputs.cache
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\TheColor\obj\Debug\net8.0\TheColor.dll
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\TheColor\obj\Debug\net8.0\refint\TheColor.dll
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\TheColor\obj\Debug\net8.0\TheColor.pdb
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\TheColor\obj\Debug\net8.0\TheColor.genruntimeconfig.cache
+C:\Users\braya\OneDrive\Documentos\Estudos\Remembering C Sharp\Classes\The Catacombs Of The Class\TheColor\obj\Debug\net8.0\ref\TheColor.dll

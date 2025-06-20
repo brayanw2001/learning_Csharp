@@ -12,9 +12,9 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("TheColor")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1bf308a416ba553fec71d3e7c385775315366b5b")]
 [assembly: System.Reflection.AssemblyProductAttribute("TheColor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TheColor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
