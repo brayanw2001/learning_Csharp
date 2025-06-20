@@ -1,33 +1,31 @@
-namespace TheCard;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-internal class Card
+namespace TheCard
 {
-    private CardColor[] color = new CardColor[] { CardColor.red, CardColor.green, CardColor.blue, CardColor.yellow };
-	private CardRank[] rank = new CardRank[] { CardRank.One, CardRank.Two, CardRank.Three, CardRank.Four, CardRank.Five, CardRank.Six, CardRank.Seven, CardRank.Eight, CardRank.Nine, CardRank.Ten, CardRank.Dollar, CardRank.Percent, CardRank.Caret, CardRank.Ampersand };
-    private List<string> cards = new List<string>();
-
-    public Card ()
+    class Card
     {
-        cards = createCard();
-    }
+        internal Colors cardColor { get; }
+        internal Ranks cardRank { get; }
 
-        
-    internal List<string> createCard ()
-    {
-        List<string> generatedCards = new List<string>();
-
-        foreach (CardColor color_ in color)
+        public Card(Colors color, Ranks rank)
         {
-            foreach (CardRank rank_  in rank)
-            {
-                generatedCards.Add($"{color_} {rank_}");
-            }
+            cardColor = color;
+            cardRank = rank;
         }
-        return generatedCards;
-    }
 
-    public void drawCard()
-    {
-        Shuffler shuffledCard = new Shuffler();
+        bool IsNumber(Card card)
+        {
+            if (card.cardRank == Ranks.DollarSign || card.cardRank == Ranks.Percent ||
+                card.cardRank == Ranks.Caret || card.cardRank == Ranks.Ampersand)
+            {
+                return false;
+            }
+
+            return true;
+        }
     }
 }

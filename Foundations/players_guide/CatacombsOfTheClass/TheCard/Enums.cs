@@ -1,27 +1,34 @@
-namespace TheCard;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public enum CardColor
+namespace TheCard
 {
-    red,
-    green,
-    blue,
-    yellow
-}
+    internal enum Colors
+    {
+        Red,
+        Green,
+        Blue,
+        Yellow
+    }
 
-public enum CardRank
-{
-    One,
-    Two,
-    Three,
-    Four,
-    Five,
-    Six,
-    Seven,
-    Eight,
-    Nine,
-    Ten,
-    Dollar,  
-    Percent,      
-    Caret,        
-    Ampersand     
+    internal enum Ranks
+    {
+        One,
+        Two,
+        Three,
+        For,
+        Five,
+        Six,
+        Seven,
+        Eight,
+        Nine,
+        DollarSign,
+        Percent,
+        Caret,
+        Ampersand
+    }
+
 }
