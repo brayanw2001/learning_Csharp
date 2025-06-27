@@ -1,0 +1,15 @@
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\inheritance - Packing Inventory\bin\Debug\net8.0\inheritance - Packing Inventory.exe
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\inheritance - Packing Inventory\bin\Debug\net8.0\inheritance - Packing Inventory.deps.json
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\inheritance - Packing Inventory\bin\Debug\net8.0\inheritance - Packing Inventory.runtimeconfig.json
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\inheritance - Packing Inventory\bin\Debug\net8.0\inheritance - Packing Inventory.dll
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\inheritance - Packing Inventory\bin\Debug\net8.0\inheritance - Packing Inventory.pdb
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\inheritance - Packing Inventory\obj\Debug\net8.0\inheritance - Packing Inventory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\inheritance - Packing Inventory\obj\Debug\net8.0\inheritance - Packing Inventory.AssemblyInfoInputs.cache
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\inheritance - Packing Inventory\obj\Debug\net8.0\inheritance - Packing Inventory.AssemblyInfo.cs
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\inheritance - Packing Inventory\obj\Debug\net8.0\inheritance - Packing Inventory.csproj.CoreCompileInputs.cache
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\inheritance - Packing Inventory\obj\Debug\net8.0\inheritance - Packing Inventory.sourcelink.json
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\inheritance - Packing Inventory\obj\Debug\net8.0\inheritance - Packing Inventory.dll
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\inheritance - Packing Inventory\obj\Debug\net8.0\refint\inheritance - Packing Inventory.dll
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\inheritance - Packing Inventory\obj\Debug\net8.0\inheritance - Packing Inventory.pdb
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\inheritance - Packing Inventory\obj\Debug\net8.0\inheritance - Packing Inventory.genruntimeconfig.cache
+C:\Users\braya\OneDrive\Documentos\Estudos\learning_Csharp\Foundations\players_guide\inheritance - Packing Inventory\obj\Debug\net8.0\ref\inheritance - Packing Inventory.dll
