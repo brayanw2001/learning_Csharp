@@ -1,7 +1,0 @@
-C:\Users\bryan\OneDrive\Documentos\Projects\Aula06_CFB\Aula06_CFB\bin\Debug\Aula06_CFB.exe.config
-C:\Users\bryan\OneDrive\Documentos\Projects\Aula06_CFB\Aula06_CFB\bin\Debug\Aula06_CFB.exe
-C:\Users\bryan\OneDrive\Documentos\Projects\Aula06_CFB\Aula06_CFB\bin\Debug\Aula06_CFB.pdb
-C:\Users\bryan\OneDrive\Documentos\Projects\Aula06_CFB\Aula06_CFB\obj\Debug\Aula06_CFB.csproj.AssemblyReference.cache
-C:\Users\bryan\OneDrive\Documentos\Projects\Aula06_CFB\Aula06_CFB\obj\Debug\Aula06_CFB.csproj.CoreCompileInputs.cache
-C:\Users\bryan\OneDrive\Documentos\Projects\Aula06_CFB\Aula06_CFB\obj\Debug\Aula06_CFB.exe
-C:\Users\bryan\OneDrive\Documentos\Projects\Aula06_CFB\Aula06_CFB\obj\Debug\Aula06_CFB.pdb
