@@ -10,7 +10,12 @@ namespace inheritance___Packing_Inventory.Itens
     {
         public Water() : base(2f, 3f)
         {
-            
+
+        }
+
+        public override string ToString()
+        {
+            return "Water";
         }
     }
 }

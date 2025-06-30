@@ -10,7 +10,12 @@ namespace inheritance___Packing_Inventory.Itens
     {
         public Bow() : base(1f, 4f)
         {
-            
+
+        }
+
+        public override string ToString()
+        {
+            return "Bow";
         }
     }
 }

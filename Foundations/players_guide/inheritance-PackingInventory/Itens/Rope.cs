@@ -10,7 +10,12 @@ namespace inheritance___Packing_Inventory.Itens
     {
         public Rope() : base(1f, 1.5f)
         {
-            
+
+        }
+
+        public override string ToString()
+        {
+            return "Rope";
         }
     }
 }

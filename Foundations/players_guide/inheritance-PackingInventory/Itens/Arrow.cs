@@ -12,5 +12,10 @@ namespace inheritance___Packing_Inventory.Itens
         {
 
         }
+
+        public override string ToString()
+        {
+            return "Rope";
+        }
     }
 }

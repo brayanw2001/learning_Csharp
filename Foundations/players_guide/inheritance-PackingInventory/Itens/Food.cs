@@ -10,7 +10,12 @@ namespace inheritance___Packing_Inventory.Itens
     {
         public Food() : base(1f, 0.5f)
         {
-            
+
+        }
+
+        public override string ToString()
+        {
+            return "Food";
         }
     }
 }
