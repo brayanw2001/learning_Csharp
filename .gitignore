@@ -1,1 +1,56 @@
+# ===============================
+# .gitignore para projetos C# / .NET
+# Compatível com: Visual Studio, VS Code, Rider
+# ===============================
+
+# Compilação
+**/bin/
+**/obj/
+**/Debug/
+**/Release/
+
+# Configurações de usuário do Visual Studio
 .vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# VS Code
+.vscode/
+
+# Rider (JetBrains)
+.idea/
+
+# ASP.NET
+**/wwwroot/lib/
+
+# Arquivos de pacotes NuGet
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+project.lock.json
+project.assets.json
+
+# Arquivos de log
+*.log
+
+# Arquivos de cobertura de teste
+*.dcvr
+
+# Arquivos de banco de dados local
+*.mdf
+*.ldf
+*.db
+*.db-shm
+*.db-wal
+
+# Arquivos de ambiente
+.env
+.env.*
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
