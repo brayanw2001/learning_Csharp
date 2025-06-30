@@ -17,11 +17,11 @@ namespace inheritance___Packing_Inventory
         public float CurrentVolume { get; private set; }
         public float CurrentWeight { get; private set; }
 
-        public Pack(int MaxItens, float MaxWeight, float MaxVolumee)
+        public Pack(int MaxItens, float MaxWeight, float MaxVolume)
         {
             this.MaxItens = MaxItens;
             this.MaxWeight = MaxWeight;
-            this.MaxVolume = MaxVolumee;
+            this.MaxVolume = MaxVolume;
             Items = new InventoryItem[MaxItens];
         }
 
@@ -38,6 +38,20 @@ namespace inheritance___Packing_Inventory
 
                 return true;
             }
+        }
+
+        public override string ToString()
+        {
+            string contents = "Pack containing ";
+
+            if (CurrentCount == 0) contents += "nothing";
+
+            for (int i = 0; i < CurrentCount; i++)
+            {
+                contents += Items[i].ToString() + " ";
+            }
+
+            return contents;
         }
 
     }

@@ -61,7 +61,7 @@ namespace inheritance___Packing_Inventory
                         Console.WriteLine("Invalid. Try again.");
                         break;
                 }
-
+                Console.WriteLine(pack.ToString());
                 Console.WriteLine($"itens: {pack.CurrentCount} | weight: {Math.Round(pack.CurrentWeight)} | volume: {Math.Round(pack.CurrentVolume)}");
             }
         }

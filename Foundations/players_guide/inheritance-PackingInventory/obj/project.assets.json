@@ -8,24 +8,31 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/home/brayan/.nuget/packages/": {}
+    "C:\\Users\\braya\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/inheritance-PackingInventory/inheritance - Packing Inventory.csproj",
+      "projectUniqueName": "C:\\Users\\braya\\OneDrive\\Documentos\\Estudos\\learning_Csharp\\Foundations\\players_guide\\inheritance-PackingInventory\\inheritance - Packing Inventory.csproj",
       "projectName": "inheritance - Packing Inventory",
-      "projectPath": "/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/inheritance-PackingInventory/inheritance - Packing Inventory.csproj",
-      "packagesPath": "/home/brayan/.nuget/packages/",
-      "outputPath": "/home/brayan/Projects/pessoal/learning_Csharp/Foundations/players_guide/inheritance-PackingInventory/obj/",
+      "projectPath": "C:\\Users\\braya\\OneDrive\\Documentos\\Estudos\\learning_Csharp\\Foundations\\players_guide\\inheritance-PackingInventory\\inheritance - Packing Inventory.csproj",
+      "packagesPath": "C:\\Users\\braya\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\braya\\OneDrive\\Documentos\\Estudos\\learning_Csharp\\Foundations\\players_guide\\inheritance-PackingInventory\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/home/brayan/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\braya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -65,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/brayan/.dotnet/sdk/9.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
