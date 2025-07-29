@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace APICatalogo.Domain_Models;
 
@@ -22,5 +23,6 @@ public class Produto
     public DateTime DataCadastro { get; set; }
 
     public int CategoriaId { get; set; }            // mapeia para a chave estrangeira no banco de dados
+    [JsonIgnore]
     public Categoria? Categoria { get; set; }        // propriedade de navegação que indica que um *produto* está relacionado com uma *categoria*
 }
