@@ -28,7 +28,7 @@ namespace APICatalogo.Controllers
             return _context.Categorias.ToList();
         }
 
-        [HttpGet("{id:int}", Name = "ObterProduto")]
+        [HttpGet("{id:int}", Name = "ObterCategoria")]
         public ActionResult<Categoria> Get(int id)
         {
             var categoria = _context.Produtos.FirstOrDefault(p => p.CategoriaId == id);
