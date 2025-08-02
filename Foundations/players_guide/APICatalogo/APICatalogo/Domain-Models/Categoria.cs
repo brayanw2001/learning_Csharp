@@ -10,7 +10,7 @@ public class Categoria
         Produtos = new Collection<Produto>();   // pois, se uma classe definiu, então ela mesma deve inicializar
     }
 
-    public int CategoriaID { get; set; }    // chave primária
+    public int CategoriaId { get; set; }    // chave primária
     [Required]
     [StringLength(80)]
     public string? Nome { get; set; }
