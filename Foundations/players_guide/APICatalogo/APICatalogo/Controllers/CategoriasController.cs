@@ -20,14 +20,14 @@ namespace APICatalogo.Controllers
         public ActionResult<IEnumerable<Categoria>> GetCategoriasProdutos()
         {
             return _context.Categorias.Include(p=> p.Produtos).Where(c => c.CategoriaId <= 20).ToList();      // o método de extensão Include permite carregar entidades relacionadas
-        }
+        }                                                                                                     // retorna a categoria com os produtos inclusos. (verificar chat Explicação sobre Include())
 
         [HttpGet]
-        public ActionResult<IEnumerable<Categoria>> Get()
+        public async Task<ActionResult<IEnumerable<Categoria>>> GetCategoriasAsync()
         {
             try
             {
-                return _context.Categorias.AsNoTracking().ToList();
+                return await _context.Categorias.AsNoTracking().ToListAsync();
             }
             catch (Exception)
             {
@@ -38,7 +38,7 @@ namespace APICatalogo.Controllers
 
         }
 
-        [HttpGet("{id:int}", Name = "ObterCategoria")]
+        [HttpGet("{id:int:min(1)}", Name = "ObterCategoria")]
         public ActionResult<Categoria> Get(int id)
         {
 
@@ -84,7 +84,7 @@ namespace APICatalogo.Controllers
         }
 
         [HttpPut("{id:int}")]                                       // esse id é mapeado para o parametro id do metodo put
-        public ActionResult Put(int id, Categoria categoria)        // 'id' vem da URL (rota), e 'produto' é o corpo (body) da requisição
+        public ActionResult Put(int id, Categoria categoria)        // 'id' vem da URL (rota) (localhost:xyz/categorias/id, e 'produto' é o corpo (body) da requisição
         {
             try
             {
@@ -108,7 +108,7 @@ namespace APICatalogo.Controllers
 
         }
 
-        [HttpDelete("{id:int}")]                         // esse id é mapeado para o parametro id do metodo Delete
+        [HttpDelete("{id:int:min(1)}")]                         // esse id é mapeado para o parametro id do metodo Delete
         public ActionResult Delete(int id)
         {
             try

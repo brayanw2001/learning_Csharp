@@ -11,13 +11,13 @@ namespace APICatalogo.Controllers
     {
         private readonly AppDbContext _context;
 
-        public ProdutosController(AppDbContext context)
+        public ProdutosController(AppDbContext context)     // /produtos
         {
             _context = context;
         }
 
-        [HttpGet]                                                           // action result permite que possa retornar uma lista de produtos(pois, <Produto>) ou todos os metodos de retorno suportados por actionresult (notfound, badrequest, etc)
-        public ActionResult<IEnumerable<Produto>> Get()                     // IEnumerable permite adiar a execução, vai trabalhar sob demanda. Não preciso ter, inicialmente, toda a coleção na memória 
+        [HttpGet]        // /produto                                         // action result permite que possa retornar uma lista de produtos(pois, <Produto>) ou todos os metodos de retorno suportados por actionresult (notfound, badrequest, etc)
+        public async Task<ActionResult<IEnumerable<Produto>>> GetProdutosAsync()                     // IEnumerable permite adiar a execução, vai trabalhar sob demanda. Não preciso ter, inicialmente, toda a coleção na memória 
         {
             try
             {
@@ -26,7 +26,7 @@ namespace APICatalogo.Controllers
                 if (produtos is null)
                     return NotFound("Produtos não encontrados...");
                 
-                return produtos;
+                return await _context.Produtos.AsNoTracking().ToListAsync();
             }
             catch (Exception)
             {
@@ -36,12 +36,34 @@ namespace APICatalogo.Controllers
             }
         }
 
-        [HttpGet("{id:int}", Name="ObterProduto")]
-        public ActionResult<Produto> Get(int id)
+        // /produto/primeiro
+        [HttpGet("primeiro")]         // / especializando o roteamento | composição de rota                                                
+        public ActionResult<Produto> GetPrimeiro()                     
         {
             try
             {
-                var produto = _context.Produtos.FirstOrDefault(p => p.ProdutoId == id);
+                var produto = _context.Produtos.AsNoTracking().FirstOrDefault();       
+
+                if (produto is null)
+                    return NotFound("Produtos não encontrados...");
+
+                return produto;
+            }
+            catch (Exception)
+            {
+
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Ocorreu um erro ao tratar sua solicitação.");
+            }
+        }
+
+        // /produtos/id
+        [HttpGet("{id:int}", Name="ObterProduto")]
+        public async Task<ActionResult<Produto>> Get(int id)
+        {
+            try
+            {
+                var produto = await _context.Produtos.FirstOrDefaultAsync(p => p.ProdutoId == id);
 
                 if (produto is null)
                     return NotFound();
@@ -79,7 +101,7 @@ namespace APICatalogo.Controllers
 
         }
 
-        [HttpPut("{id:int}")]                                  // esse id é mapeado para o parametro id do metodo put
+        [HttpPut("{id:int:min(1)}")]                                  // esse id é mapeado para o parametro id do metodo put
         public ActionResult Put(int id, Produto produto)       // 'id' vem da URL (rota), e 'produto' é o corpo (body) da requisição
         {
             try
@@ -102,7 +124,7 @@ namespace APICatalogo.Controllers
             }
         }
 
-        [HttpDelete("{id:int}")]                                  // esse id é mapeado para o parametro id do metodo Delete
+        [HttpDelete("{id:int:min(1)}")]                                  // esse id é mapeado para o parametro id do metodo Delete
         public ActionResult Delete(int id)       
         {
             try
