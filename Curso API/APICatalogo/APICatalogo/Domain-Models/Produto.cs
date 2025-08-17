@@ -5,7 +5,7 @@ using APICatalogo.Validations;
 
 namespace APICatalogo.Domain_Models;
 
-public class Produto
+public class Produto : IValidatableObject
 {
     public int ProdutoId { get; set; }
 
@@ -34,4 +34,16 @@ public class Produto
     [JsonIgnore]
     
     public Categoria? Categoria { get; set; }        // propriedade de navegação que indica que um *produto* está relacionado com uma *categoria*
+
+    public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+    {
+        if (this.Estoque <= 0)
+        {
+            yield return new
+                ValidationResult("O estoque deve ser maior que zero",
+                new[]
+                { nameof(this.Estoque) }
+                );
+        }
+    }
 }
