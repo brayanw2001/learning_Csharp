@@ -10,15 +10,18 @@ namespace APICatalogo.Controllers
     public class CategoriasController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly ILogger _logger;
 
-        public CategoriasController(AppDbContext context)       // solicito ao framework a instancia, que é injetada pelo container de inativos
+        public CategoriasController(AppDbContext context, ILogger<CategoriasController> logger)       // solicito ao framework a instancia, que é injetada pelo container de inativos
         {
             _context = context;
+            _logger = logger;
         }
 
         [HttpGet("produtos")]
         public ActionResult<IEnumerable<Categoria>> GetCategoriasProdutos()
         {
+            _logger.LogInformation("========= GET api/categorias/produtos =========");
             return _context.Categorias.Include(p=> p.Produtos).Where(c => c.CategoriaId <= 20).ToList();      // o método de extensão Include permite carregar entidades relacionadas
         }                                                                                                     // retorna a categoria com os produtos inclusos. (verificar chat Explicação sobre Include())
 
