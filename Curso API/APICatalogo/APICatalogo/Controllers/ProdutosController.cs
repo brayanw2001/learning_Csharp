@@ -1,5 +1,6 @@
 ﻿using APICatalogo.Context;
 using APICatalogo.Domain_Models;
+using APICatalogo.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,45 +10,42 @@ namespace APICatalogo.Controllers
     [ApiController]
     public class ProdutosController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly IProdutoRepository _repository;
 
-        public ProdutosController(AppDbContext context)     // /produtos
+        public ProdutosController(IProdutoRepository repository)     // /produtos
         {
-            _context = context;
+            _repository = repository;
         }
 
         [HttpGet]        // /produto                                         // action result permite que possa retornar uma lista de produtos(pois, <Produto>) ou todos os metodos de retorno suportados por actionresult (notfound, badrequest, etc)
-        public async Task<ActionResult<IEnumerable<Produto>>> GetProdutosAsync()                     // IEnumerable permite adiar a execução, vai trabalhar sob demanda. Não preciso ter, inicialmente, toda a coleção na memória 
+        public ActionResult<IEnumerable<Produto>> GetProdutosAsync()                     // IEnumerable permite adiar a execução, vai trabalhar sob demanda. Não preciso ter, inicialmente, toda a coleção na memória 
         {
+            var produtos = _repository.GetProdutos().ToList();       // através do contexto, acesso produtos
+            
             try
             {
-                var produtos = _context.Produtos.AsNoTracking().ToList();       // através do contexto, acesso produtos
-
                 if (produtos is null)
-                    return NotFound("Produtos não encontrados...");
-                
-                return await _context.Produtos.AsNoTracking().ToListAsync();
+                    return NotFound("Produtos não encontrados...");  
             }
             catch (Exception)
             {
-
                 return StatusCode(StatusCodes.Status500InternalServerError,
                     "Ocorreu um erro ao tratar sua solicitação.");
             }
+
+            return Ok(produtos);
         }
 
         // /produto/primeiro
         [HttpGet("primeiro")]         // / especializando o roteamento | composição de rota                                                
         public ActionResult<Produto> GetPrimeiro()                     
         {
+            var produto = _repository.GetProdutos().FirstOrDefault();  
+            
             try
             {
-                var produto = _context.Produtos.AsNoTracking().FirstOrDefault();       
-
                 if (produto is null)
                     return NotFound("Produtos não encontrados...");
-
-                return produto;
             }
             catch (Exception)
             {
@@ -55,24 +53,25 @@ namespace APICatalogo.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError,
                     "Ocorreu um erro ao tratar sua solicitação.");
             }
+
+            return Ok(produto);
         }
 
         // /produtos/id
         [HttpGet("{id:int}", Name="ObterProduto")]
-        public async Task<ActionResult<Produto>> Get(int id)
+        public ActionResult<Produto> Get(int id)
         {
             try
             {
-                var produto = await _context.Produtos.FirstOrDefaultAsync(p => p.ProdutoId == id);
+                var produto = _repository.GetProdutoId(id);
 
                 if (produto is null)
-                    return NotFound();
+                    return NotFound("Produto não encontrado");
 
-                return produto;
+                return Ok(produto);
             }
             catch (Exception)
             {
-
                 return StatusCode(StatusCodes.Status500InternalServerError,
                     "Ocorreu um erro ao tratar sua solicitação.");
             }
@@ -85,40 +84,35 @@ namespace APICatalogo.Controllers
             {
                 if (produto is null)
                     return BadRequest();
-            
-                _context.Produtos.Add(produto);          // trabalhando na memoria
-                _context.SaveChanges();                 // persiste na tabela
+
+               var novoProduto = _repository.CreateProduto(produto);       
 
                 return new CreatedAtRouteResult("ObterProduto", //nome definido para a rota
-                    new { id = produto.ProdutoId}, produto);    // informo o id que foi incluído e informo o objeto produto que incluí
+                    new { id = produto.ProdutoId}, novoProduto);    // informo o id que foi incluído e informo o objeto produto que incluí
             }
             catch (Exception)
             {
-
                 return StatusCode(StatusCodes.Status500InternalServerError,
                     "Ocorreu um erro ao tratar sua solicitação.");
             }
 
         }
 
-        [HttpPut("{id:int:min(1)}")]                                  // esse id é mapeado para o parametro id do metodo put
+        [HttpPut("{id:int:min(1)}")]                           // esse id é mapeado para o parametro id do metodo put
         public ActionResult Put(int id, Produto produto)       // 'id' vem da URL (rota), e 'produto' é o corpo (body) da requisição
         {
             try
             {
                 if (id != produto.ProdutoId)
-                {
                     return BadRequest();
-                }
 
-                _context.Entry(produto).State = EntityState.Modified;
-                _context.SaveChanges();
+                if(_repository.Update(produto) == true)
+                    return Ok(produto);
 
-                return Ok(produto);
+                return StatusCode(500, $"Falha ao atualizar o produto de id = {id}");
             }
             catch (Exception)
             {
-
                 return StatusCode(StatusCodes.Status500InternalServerError,
                     "Ocorreu um erro ao tratar sua solicitação.");
             }
@@ -129,21 +123,15 @@ namespace APICatalogo.Controllers
         {
             try
             {
-                var produto = _context.Produtos.FirstOrDefault(p => p.ProdutoId == id);
+                Boolean deletado = _repository.Delete(id);
+                
+                if (deletado)
+                    return Ok($"O produto de id = {id} foi deletado");
 
-                if(produto is null)
-                {
-                    return NotFound("Produto não localizado");
-                }
-
-                _context.Produtos.Remove(produto);
-                _context.SaveChanges();
-
-                return Ok(produto);         // (produto) retorna o produto excluído no response body
+                return StatusCode(500, $"Falha ao excluir o produto de id = {id}");
             }
             catch (Exception)
             {
-
                 return StatusCode(StatusCodes.Status500InternalServerError,
                     "Ocorreu um erro ao tratar sua solicitação.");
             }

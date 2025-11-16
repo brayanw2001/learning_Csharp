@@ -9,7 +9,7 @@ namespace APICatalogo.Repositories
     {
         private readonly AppDbContext _context;
 
-        CategoriaRepository(AppDbContext context)
+        public CategoriaRepository(AppDbContext context)
         {
             _context = context;
         }
@@ -30,12 +30,10 @@ namespace APICatalogo.Repositories
             {
                 throw new ArgumentNullException(nameof(categoria));
             }
-            else
-            {
-                _context.Categorias.Add(categoria);
-                _context.SaveChanges();
-                return categoria;
-            }
+
+            _context.Categorias.Add(categoria);
+            _context.SaveChanges();
+            return categoria;
         }
 
         public Categoria Update(Categoria categoria)
