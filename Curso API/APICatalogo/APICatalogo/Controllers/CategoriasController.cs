@@ -1,6 +1,6 @@
 ﻿using APICatalogo.Context;
 using APICatalogo.Domain_Models;
-using APICatalogo.Repositories;
+using APICatalogo.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
