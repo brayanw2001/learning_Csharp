@@ -1,5 +1,6 @@
 ﻿using APICatalogo.Context;
 using APICatalogo.Domain_Models;
+using APICatalogo.Repositories;
 using APICatalogo.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,7 +11,7 @@ namespace APICatalogo.Controllers
     [ApiController]
     public class CategoriasController : Controller
     {
-        private readonly ICategoriaRepository _repository;
+        private readonly Repository<Categoria> _repository;
         private readonly ILogger _logger;
 
         public CategoriasController(ICategoriaRepository repository, ILogger<CategoriasController> logger)       // solicito ao framework a instancia, que é injetada pelo container de inativos
@@ -29,14 +30,14 @@ namespace APICatalogo.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Categoria>> GetCategorias()
         {
-            var categorias = _repository.GetCategorias();
+            var categorias = _repository.GetAll();
             return Ok(categorias);
         }
 
         [HttpGet("{id:int:min(1)}", Name = "ObterCategoria")]
         public ActionResult<Categoria> Get(int id)
         {
-            var categoria = _repository.GetCategoriaId(id);
+            var categoria = _repository.Get(c => c.CategoriaId == id);
 
             if (categoria is null)
             {
@@ -56,7 +57,7 @@ namespace APICatalogo.Controllers
                 return BadRequest("Dados inválidos");
             }
 
-            var categoriaCriada = _repository.CreateCategoria(categoria);
+            var categoriaCriada = _repository.Create(categoria);
 
             return new CreatedAtRouteResult("ObterCategoria",
                 new { id = categoriaCriada.CategoriaId}, categoriaCriada);
@@ -78,14 +79,15 @@ namespace APICatalogo.Controllers
         [HttpDelete("{id:int:min(1)}")]                         // esse id é mapeado para o parametro id do metodo Delete
         public ActionResult Delete(int id)
         {
-            var categoriaExcluida = _repository.Delete(id);
+            var categoria = _repository.Get(c => c.CategoriaId == id);
 
-            if (categoriaExcluida is null)
+            if (categoria is null)
             {
                 _logger.LogWarning($"Categoria com id={id} não encontrada");
                 return BadRequest($"Categoria com id={id} não encontrada");
             }
 
+            var categoriaExcluida = _repository.Delete(categoria);
             return Ok(categoriaExcluida);
         }
     }
