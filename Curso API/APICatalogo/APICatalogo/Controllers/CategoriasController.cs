@@ -11,10 +11,10 @@ namespace APICatalogo.Controllers
     [ApiController]
     public class CategoriasController : Controller
     {
-        private readonly Repository<Categoria> _repository;
+        private readonly IRepository<Categoria> _repository;
         private readonly ILogger _logger;
 
-        public CategoriasController(ICategoriaRepository repository, ILogger<CategoriasController> logger)       // solicito ao framework a instancia, que é injetada pelo container de inativos
+        public CategoriasController(IRepository<Categoria> repository, ILogger<CategoriasController> logger)       // solicito ao framework a instancia, que é injetada pelo container de inativos
         {
             _repository = repository;
             _logger = logger;

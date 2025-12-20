@@ -20,7 +20,7 @@ namespace APICatalogo.Repositories
 
         public T? Get(Expression<Func<T, bool>> predicate)
         {
-            return _context.Set<T>().FirstOrDefault(x);
+            return _context.Set<T>().FirstOrDefault(predicate);
         }
 
         public T Create(T entity)

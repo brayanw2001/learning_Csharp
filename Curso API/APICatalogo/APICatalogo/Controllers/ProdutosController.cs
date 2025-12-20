@@ -2,6 +2,7 @@
 using APICatalogo.Domain_Models;
 using APICatalogo.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 
 namespace APICatalogo.Controllers
@@ -10,60 +11,33 @@ namespace APICatalogo.Controllers
     [ApiController]
     public class ProdutosController : Controller
     {
-        private readonly IProdutoRepository _repository;
+        private readonly IProdutoRepository _produtoRepository;        // injeta o genérico
+        private readonly IRepository<Produto> _repository;             // injeta o específico. Eu poderia utilizar apenas esse, uma vez que o específico herda do genérico
 
-        public ProdutosController(IProdutoRepository repository)     // /produtos
+        public ProdutosController(IRepository<Produto> repository, IProdutoRepository produtoRepository)     // /produtos
         {
             _repository = repository;
-        }
+            _produtoRepository = produtoRepository;
 
-        [HttpGet]        // /produto                                         // action result permite que possa retornar uma lista de produtos(pois, <Produto>) ou todos os metodos de retorno suportados por actionresult (notfound, badrequest, etc)
-        public ActionResult<IEnumerable<Produto>> GetProdutosAsync()                     // IEnumerable permite adiar a execução, vai trabalhar sob demanda. Não preciso ter, inicialmente, toda a coleção na memória 
+        }
+        [HttpGet("Produtos/{id}")]
+        public ActionResult<IEnumerable<Produto>> GetProdutosPorCategoria(int id)
         {
-            var produtos = _repository.GetProdutos().ToList();       // através do contexto, acesso produtos
-            
-            try
-            {
-                if (produtos is null)
-                    return NotFound("Produtos não encontrados...");  
-            }
-            catch (Exception)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError,
-                    "Ocorreu um erro ao tratar sua solicitação.");
-            }
+            var produtos = _produtoRepository.GetProdutosPorCategoria(id);
+
+            if (produtos is null)
+                return NotFound();
 
             return Ok(produtos);
         }
 
-        // /produto/primeiro
-        [HttpGet("primeiro")]         // / especializando o roteamento | composição de rota                                                
-        public ActionResult<Produto> GetPrimeiro()                     
-        {
-            var produto = _repository.GetProdutos().FirstOrDefault();  
-            
-            try
-            {
-                if (produto is null)
-                    return NotFound("Produtos não encontrados...");
-            }
-            catch (Exception)
-            {
 
-                return StatusCode(StatusCodes.Status500InternalServerError,
-                    "Ocorreu um erro ao tratar sua solicitação.");
-            }
-
-            return Ok(produto);
-        }
-
-        // /produtos/id
         [HttpGet("{id:int}", Name="ObterProduto")]
         public ActionResult<Produto> Get(int id)
         {
             try
             {
-                var produto = _repository.GetProdutoId(id);
+                var produto = _repository.Get(c => c.ProdutoId == id);
 
                 if (produto is null)
                     return NotFound("Produto não encontrado");
@@ -85,7 +59,7 @@ namespace APICatalogo.Controllers
                 if (produto is null)
                     return BadRequest();
 
-               var novoProduto = _repository.CreateProduto(produto);       
+               var novoProduto = _repository.Create(produto);       
 
                 return new CreatedAtRouteResult("ObterProduto", //nome definido para a rota
                     new { id = produto.ProdutoId}, novoProduto);    // informo o id que foi incluído e informo o objeto produto que incluí
@@ -106,10 +80,9 @@ namespace APICatalogo.Controllers
                 if (id != produto.ProdutoId)
                     return BadRequest();
 
-                if(_repository.Update(produto) == true)
-                    return Ok(produto);
+                var produtoAtualizado = _repository.Update(produto);
 
-                return StatusCode(500, $"Falha ao atualizar o produto de id = {id}");
+                return Ok(produtoAtualizado);
             }
             catch (Exception)
             {
@@ -123,12 +96,13 @@ namespace APICatalogo.Controllers
         {
             try
             {
-                Boolean deletado = _repository.Delete(id);
-                
-                if (deletado)
-                    return Ok($"O produto de id = {id} foi deletado");
+                var deletado = _repository.Get(c => c.ProdutoId == id);
 
-                return StatusCode(500, $"Falha ao excluir o produto de id = {id}");
+                if (deletado is null)
+                    return StatusCode(500, $"Não foi encontrado produto com id = {id}");
+
+                _repository.Delete(deletado);
+                 return Ok($"O produto de id = {id} foi deletado");
             }
             catch (Exception)
             {
