@@ -31,12 +31,12 @@ public class UnitOfWork : IUnitOfWork
         }
     }
 
-    public void commit()
+    public void Commit()
     {
         _context.SaveChanges();
     }
 
-    public void dispose()
+    public void Dispose()
     {
         _context.Dispose();
     }

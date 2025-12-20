@@ -11,19 +11,20 @@ namespace APICatalogo.Controllers
     [ApiController]
     public class ProdutosController : Controller
     {
-        private readonly IProdutoRepository _produtoRepository;        // injeta o genérico
-        private readonly IRepository<Produto> _repository;             // injeta o específico. Eu poderia utilizar apenas esse, uma vez que o específico herda do genérico
+        private readonly IUnitOfWork _unitOfWork;
+        //private readonly IProdutoRepository _produtoRepository;        // injeta o genérico
+        //private readonly IRepository<Produto> _repository;             // injeta o específico. Eu poderia utilizar apenas esse, uma vez que o específico herda do genérico
 
-        public ProdutosController(IRepository<Produto> repository, IProdutoRepository produtoRepository)     // /produtos
+        public ProdutosController(IUnitOfWork unitOfWork)     // /produtos
         {
-            _repository = repository;
-            _produtoRepository = produtoRepository;
-
+            //_repository = repository;
+            //_produtoRepository = produtoRepository;
+            _unitOfWork = unitOfWork;
         }
         [HttpGet("Produtos/{id}")]
         public ActionResult<IEnumerable<Produto>> GetProdutosPorCategoria(int id)
         {
-            var produtos = _produtoRepository.GetProdutosPorCategoria(id);
+            var produtos = _unitOfWork.ProdutoRepository.GetProdutosPorCategoria(id);
 
             if (produtos is null)
                 return NotFound();
@@ -37,7 +38,7 @@ namespace APICatalogo.Controllers
         {
             try
             {
-                var produto = _repository.Get(c => c.ProdutoId == id);
+                var produto = _unitOfWork.ProdutoRepository.Get(c => c.ProdutoId == id);
 
                 if (produto is null)
                     return NotFound("Produto não encontrado");
@@ -59,7 +60,8 @@ namespace APICatalogo.Controllers
                 if (produto is null)
                     return BadRequest();
 
-               var novoProduto = _repository.Create(produto);       
+                var novoProduto = _unitOfWork.ProdutoRepository.Create(produto);
+                _unitOfWork.Commit();
 
                 return new CreatedAtRouteResult("ObterProduto", //nome definido para a rota
                     new { id = produto.ProdutoId}, novoProduto);    // informo o id que foi incluído e informo o objeto produto que incluí
@@ -80,7 +82,8 @@ namespace APICatalogo.Controllers
                 if (id != produto.ProdutoId)
                     return BadRequest();
 
-                var produtoAtualizado = _repository.Update(produto);
+                var produtoAtualizado = _unitOfWork.ProdutoRepository.Update(produto);
+                _unitOfWork.Commit();
 
                 return Ok(produtoAtualizado);
             }
@@ -96,12 +99,14 @@ namespace APICatalogo.Controllers
         {
             try
             {
-                var deletado = _repository.Get(c => c.ProdutoId == id);
+                var deletado = _unitOfWork.ProdutoRepository.Get(c => c.ProdutoId == id);
 
                 if (deletado is null)
                     return StatusCode(500, $"Não foi encontrado produto com id = {id}");
 
-                _repository.Delete(deletado);
+                _unitOfWork.ProdutoRepository.Delete(deletado);
+                _unitOfWork.Commit();
+
                  return Ok($"O produto de id = {id} foi deletado");
             }
             catch (Exception)

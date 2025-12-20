@@ -4,6 +4,7 @@ using APICatalogo.Repositories;
 using APICatalogo.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using NuGet.Protocol.Core.Types;
 
 namespace APICatalogo.Controllers
 {
@@ -11,33 +12,36 @@ namespace APICatalogo.Controllers
     [ApiController]
     public class CategoriasController : Controller
     {
-        private readonly IRepository<Categoria> _repository;
+        //private readonly IRepository<Categoria> _repository;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly ILogger _logger;
 
-        public CategoriasController(IRepository<Categoria> repository, ILogger<CategoriasController> logger)       // solicito ao framework a instancia, que é injetada pelo container de inativos
+        public CategoriasController(IUnitOfWork unitOfWork, ILogger<CategoriasController> logger)       // solicito ao framework a instancia, que é injetada pelo container de inativos
         {
-            _repository = repository;
+            _unitOfWork = unitOfWork;
             _logger = logger;
         }
 
-       // [HttpGet("produtos")]
-       // public ActionResult<IEnumerable<Categoria>> GetCategoriasProdutos()
-       // {
-       //     _logger.LogInformation("========= GET api/categorias/produtos =========");
-       //     return _context.Categorias.Include(p=> p.Produtos).Where(c => c.CategoriaId <= 20).ToList();      // o método de extensão Include permite carregar entidades relacionadas
-       // }                                                                                                     // retorna a categoria com os produtos inclusos. (verificar chat Explicação sobre Include())
+        // [HttpGet("produtos")]
+        // public ActionResult<IEnumerable<Categoria>> GetCategoriasProdutos()
+        // {
+        //     _logger.LogInformation("========= GET api/categorias/produtos =========");
+        //     return _context.Categorias.Include(p=> p.Produtos).Where(c => c.CategoriaId <= 20).ToList();      // o método de extensão Include permite carregar entidades relacionadas
+        // }                                                                                                     // retorna a categoria com os produtos inclusos. (verificar chat Explicação sobre Include())
 
         [HttpGet]
         public ActionResult<IEnumerable<Categoria>> GetCategorias()
         {
-            var categorias = _repository.GetAll();
+            //var categorias = _repository.GetAll();
+            var categorias = _unitOfWork.CategoriaRepository.GetAll();
             return Ok(categorias);
         }
 
         [HttpGet("{id:int:min(1)}", Name = "ObterCategoria")]
         public ActionResult<Categoria> Get(int id)
         {
-            var categoria = _repository.Get(c => c.CategoriaId == id);
+            //var categoria = _repository.Get(c => c.CategoriaId == id);
+            var categoria = _unitOfWork.CategoriaRepository.Get(c => c.CategoriaId == id);
 
             if (categoria is null)
             {
@@ -57,7 +61,9 @@ namespace APICatalogo.Controllers
                 return BadRequest("Dados inválidos");
             }
 
-            var categoriaCriada = _repository.Create(categoria);
+            ;// var categoriaCriada = _repository.Create(categoria);
+            var categoriaCriada = _unitOfWork.CategoriaRepository.Create(categoria);
+            _unitOfWork.Commit();
 
             return new CreatedAtRouteResult("ObterCategoria",
                 new { id = categoriaCriada.CategoriaId}, categoriaCriada);
@@ -72,14 +78,18 @@ namespace APICatalogo.Controllers
                 return BadRequest($"Dados inválidos. O novo id modifica o id anterior");
             }
 
-            _repository.Update(categoria);
+            //_repository.Update(categoria);
+            _unitOfWork.CategoriaRepository.Update(categoria);
+            _unitOfWork.Commit();
+
             return Ok(categoria);                
         }
 
         [HttpDelete("{id:int:min(1)}")]                         // esse id é mapeado para o parametro id do metodo Delete
         public ActionResult Delete(int id)
         {
-            var categoria = _repository.Get(c => c.CategoriaId == id);
+            //var categoria = _repository.Get(c => c.CategoriaId == id);
+            var categoria = _unitOfWork.CategoriaRepository.Get(c => c.CategoriaId == id);
 
             if (categoria is null)
             {
@@ -87,7 +97,10 @@ namespace APICatalogo.Controllers
                 return BadRequest($"Categoria com id={id} não encontrada");
             }
 
-            var categoriaExcluida = _repository.Delete(categoria);
+            //var categoriaExcluida = _repository.Delete(categoria);
+            var categoriaExcluida = _unitOfWork.CategoriaRepository.Delete(categoria);
+            _unitOfWork.Commit();
+
             return Ok(categoriaExcluida);
         }
     }
