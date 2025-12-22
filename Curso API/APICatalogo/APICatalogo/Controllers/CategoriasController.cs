@@ -1,7 +1,9 @@
 ﻿using APICatalogo.Context;
 using APICatalogo.Domain_Models;
+using APICatalogo.DTO;
 using APICatalogo.Repositories;
 using APICatalogo.Repositories.Interfaces;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NuGet.Protocol.Core.Types;
@@ -14,12 +16,14 @@ namespace APICatalogo.Controllers
     {
         //private readonly IRepository<Categoria> _repository;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
         private readonly ILogger _logger;
 
-        public CategoriasController(IUnitOfWork unitOfWork, ILogger<CategoriasController> logger)       // solicito ao framework a instancia, que é injetada pelo container de inativos
+        public CategoriasController(IUnitOfWork unitOfWork, ILogger<CategoriasController> logger, IMapper mapper)       // solicito ao framework a instancia, que é injetada pelo container de inativos
         {
             _unitOfWork = unitOfWork;
             _logger = logger;
+            _mapper = mapper;
         }
 
         // [HttpGet("produtos")]
@@ -30,15 +34,16 @@ namespace APICatalogo.Controllers
         // }                                                                                                     // retorna a categoria com os produtos inclusos. (verificar chat Explicação sobre Include())
 
         [HttpGet]
-        public ActionResult<IEnumerable<Categoria>> GetCategorias()
+        public ActionResult<IEnumerable<CategoriaDTO>> GetCategorias()
         {
             //var categorias = _repository.GetAll();
             var categorias = _unitOfWork.CategoriaRepository.GetAll();
-            return Ok(categorias);
+            var categoriasDto = _mapper.Map<IEnumerable<CategoriaDTO>>(categorias);
+            return Ok(categoriasDto);
         }
 
         [HttpGet("{id:int:min(1)}", Name = "ObterCategoria")]
-        public ActionResult<Categoria> Get(int id)
+        public ActionResult<CategoriaDTO> Get(int id)
         {
             //var categoria = _repository.Get(c => c.CategoriaId == id);
             var categoria = _unitOfWork.CategoriaRepository.Get(c => c.CategoriaId == id);
@@ -49,44 +54,55 @@ namespace APICatalogo.Controllers
                 return NotFound($"Categoria com id={id} não encontrada...");
             }
 
-            return Ok(categoria);
+            var categoriaDto = _mapper.Map<CategoriaDTO>(categoria);
+
+            return Ok(categoriaDto);
         }
 
         [HttpPost]
-        public ActionResult Post(Categoria categoria)
+        public ActionResult<CategoriaDTO> Post(CategoriaDTO categoriaDto)
         {
-            if(categoria is null)
+
+            if(categoriaDto is null)
             {
                 _logger.LogWarning($"Dados inválidos");
                 return BadRequest("Dados inválidos");
-            }
+            };
 
-            ;// var categoriaCriada = _repository.Create(categoria);
-            var categoriaCriada = _unitOfWork.CategoriaRepository.Create(categoria);
+            var categoria = _mapper.Map<Categoria>(categoriaDto);
+
+            // var categoriaCriada = _repository.Create(categoria);
+            var novaCategoria = _unitOfWork.CategoriaRepository.Create(categoria);
             _unitOfWork.Commit();
 
+            var novaCategoriaDto = _mapper.Map<CategoriaDTO>(novaCategoria);
+
             return new CreatedAtRouteResult("ObterCategoria",
-                new { id = categoriaCriada.CategoriaId}, categoriaCriada);
+                new { id = novaCategoriaDto.CategoriaId}, novaCategoriaDto);
         }
 
         [HttpPut("{id:int}")]                                       // esse id é mapeado para o parametro id do metodo put
-        public ActionResult Put(int id, Categoria categoria)        // 'id' vem da URL (rota) (localhost:xyz/categorias/id, e 'produto' é o corpo (body) da requisição
+        public ActionResult<CategoriaDTO> Put(int id, CategoriaDTO categoriaDto)        // 'id' vem da URL (rota) (localhost:xyz/categorias/id, e 'produto' é o corpo (body) da requisição
         {
-            if (id != categoria.CategoriaId)
+            if (id != categoriaDto.CategoriaId)
             {
                 _logger.LogWarning($"Dados inválidos. O novo id modifica o id anterior");
                 return BadRequest($"Dados inválidos. O novo id modifica o id anterior");
             }
 
+            var categoria = _mapper.Map<Categoria>(categoriaDto);
+
             //_repository.Update(categoria);
-            _unitOfWork.CategoriaRepository.Update(categoria);
+            var categoriaAtualizada = _unitOfWork.CategoriaRepository.Update(categoria);
             _unitOfWork.Commit();
 
-            return Ok(categoria);                
+            var categoriaAtualizazdaDto = _mapper.Map<CategoriaDTO>(categoriaAtualizada);
+
+            return Ok(categoriaAtualizazdaDto);                
         }
 
         [HttpDelete("{id:int:min(1)}")]                         // esse id é mapeado para o parametro id do metodo Delete
-        public ActionResult Delete(int id)
+        public ActionResult<CategoriaDTO> Delete(int id)
         {
             //var categoria = _repository.Get(c => c.CategoriaId == id);
             var categoria = _unitOfWork.CategoriaRepository.Get(c => c.CategoriaId == id);
@@ -100,6 +116,8 @@ namespace APICatalogo.Controllers
             //var categoriaExcluida = _repository.Delete(categoria);
             var categoriaExcluida = _unitOfWork.CategoriaRepository.Delete(categoria);
             _unitOfWork.Commit();
+
+            var categoriaExcluidaDto = _mapper.Map<CategoriaDTO>(categoriaExcluida);
 
             return Ok(categoriaExcluida);
         }
