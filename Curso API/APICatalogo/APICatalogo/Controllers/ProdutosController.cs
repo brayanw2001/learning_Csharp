@@ -1,9 +1,9 @@
-﻿using APICatalogo.Context;
-using APICatalogo.Domain_Models;
+﻿using APICatalogo.Domain_Models;
+using APICatalogo.DTO;
 using APICatalogo.Repositories.Interfaces;
+using AutoMapper;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.EntityFrameworkCore;
 
 namespace APICatalogo.Controllers
 {
@@ -12,15 +12,31 @@ namespace APICatalogo.Controllers
     public class ProdutosController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
         //private readonly IProdutoRepository _produtoRepository;        // injeta o genérico
         //private readonly IRepository<Produto> _repository;             // injeta o específico. Eu poderia utilizar apenas esse, uma vez que o específico herda do genérico
 
-        public ProdutosController(IUnitOfWork unitOfWork)     // /produtos
+        public ProdutosController(IUnitOfWork unitOfWork, IMapper mapper)
         {
             //_repository = repository;
             //_produtoRepository = produtoRepository;
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
+
+        [HttpGet("/produtos")]
+        public ActionResult<IEnumerable<Produto>> GetProdutos()
+        {
+            IEnumerable<Produto> produtos = _unitOfWork.ProdutoRepository.GetAll();
+
+            if (produtos is null)
+            {
+                return NotFound();
+            }
+
+            return Ok(produtos);
+        }
+
         [HttpGet("Produtos/{id}")]
         public ActionResult<IEnumerable<Produto>> GetProdutosPorCategoria(int id)
         {
@@ -72,6 +88,39 @@ namespace APICatalogo.Controllers
                     "Ocorreu um erro ao tratar sua solicitação.");
             }
 
+        }
+
+        [HttpPatch("{id}/UpdatePartial")]
+        public ActionResult<ProdutoDTOUpdateResponse> Patch(int id,
+            JsonPatchDocument<ProdutoDTOUpdateRequest> patchProdutoDTO)
+        {
+            if (patchProdutoDTO is null || id <= 0)
+            {
+                return BadRequest();
+            }
+
+            Produto? produto = _unitOfWork.ProdutoRepository.Get(c => c.ProdutoId == id);
+
+            if (produto is null)
+            {
+                return NotFound();
+            }
+
+            ProdutoDTOUpdateRequest produtoUpdateRequest = _mapper.Map<ProdutoDTOUpdateRequest>(produto);
+
+            patchProdutoDTO.ApplyTo(produtoUpdateRequest, ModelState);
+
+            if (!ModelState.IsValid || !TryValidateModel(produtoUpdateRequest))
+            {
+                return BadRequest(ModelState);
+            }
+
+            _mapper.Map(produtoUpdateRequest, produto);
+
+            _unitOfWork.ProdutoRepository.Update(produto);
+            _unitOfWork.Commit();
+
+            return Ok(_mapper.Map<ProdutoDTOUpdateResponse>(produto));
         }
 
         [HttpPut("{id:int:min(1)}")]                           // esse id é mapeado para o parametro id do metodo put

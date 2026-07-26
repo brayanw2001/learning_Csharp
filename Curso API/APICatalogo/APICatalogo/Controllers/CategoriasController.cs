@@ -1,12 +1,8 @@
-﻿using APICatalogo.Context;
-using APICatalogo.Domain_Models;
+﻿using APICatalogo.Domain_Models;
 using APICatalogo.DTO;
-using APICatalogo.Repositories;
 using APICatalogo.Repositories.Interfaces;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using NuGet.Protocol.Core.Types;
 
 namespace APICatalogo.Controllers
 {
